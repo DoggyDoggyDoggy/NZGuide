@@ -6,6 +6,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import denys.diomaxius.nzguide.data.remote.api.WeatherApi
 import denys.diomaxius.nzguide.data.remote.network.RetrofitClient
+import denys.diomaxius.nzguide.data.repository.WeatherRepositoryImpl
+import denys.diomaxius.nzguide.domain.repository.WeatherRepository
 import javax.inject.Singleton
 
 @Module
@@ -14,4 +16,9 @@ object AppModule {
     @Provides
     @Singleton
     fun provideEventFindApi(): WeatherApi = RetrofitClient.api
+
+    @Provides
+    @Singleton
+    fun provideWeatherRepository(apiService: WeatherApi): WeatherRepository =
+        WeatherRepositoryImpl(apiService)
 }
