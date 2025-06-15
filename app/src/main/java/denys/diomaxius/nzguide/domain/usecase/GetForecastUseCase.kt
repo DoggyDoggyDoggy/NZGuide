@@ -9,7 +9,7 @@ class GetForecastUseCase @Inject constructor(
 ) {
     suspend operator fun invoke(city: String, apiKey: String) : List<DailyForecast> {
         return weatherRepository.getForecast(city, apiKey).filter {
-            it.date.contains("12:00:00")
+            it.date.contains("03:00:00")
         }
     }
 }
