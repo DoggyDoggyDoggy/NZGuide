@@ -1,4 +1,4 @@
-package denys.diomaxius.nzguide.ui.screen
+package denys.diomaxius.nzguide.ui.components.cityphotoslider
 
 import denys.diomaxius.nzguide.domain.model.CityPhotoSlider
 
