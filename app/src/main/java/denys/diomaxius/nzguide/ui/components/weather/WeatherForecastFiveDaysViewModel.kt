@@ -25,7 +25,7 @@ class WeatherForecastFiveDaysViewModel @Inject constructor(
     }
 
     fun getForecast(
-        city: String = "Hamilton,NZ",
+        city: String = "hamilton,NZ",
         apiKey: String = DEFAULT_API_KEY
     ) {
         viewModelScope.launch {
