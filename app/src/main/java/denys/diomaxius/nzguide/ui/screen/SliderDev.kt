@@ -30,64 +30,78 @@ import kotlinx.coroutines.delay
 fun SliderDev(
     city: CityPhotoSlider
 ) {
-    val pagerState = rememberPagerState(
-        pageCount = {
-            city.photo.size
+    Box(
+        contentAlignment = Alignment.BottomStart
+    ) {
+        AutoScrollPager(
+            items = city.photo,
+            modifier = Modifier
+                .fillMaxWidth()
+        ) { assetPath ->
+            AssetImage(assetPath)
         }
-    )
+
+        TextOverlay(city.city)
+    }
+}
+
+@Composable
+fun AutoScrollPager(
+    items: List<String>,
+    modifier: Modifier = Modifier,
+    intervalMs: Long = 4000L,
+    animationMillis: Int = 1000,
+    pageContent: @Composable (String) -> Unit
+) {
+    val pagerState = rememberPagerState(pageCount = { items.size })
 
     LaunchedEffect(pagerState) {
         var goingForward = true
-
         while (true) {
-            delay(4000)
-
-            val nextPage = when {
-                goingForward && pagerState.currentPage < city.photo.size - 1 -> pagerState.currentPage + 1
+            delay(intervalMs)
+            val next = when {
+                goingForward && pagerState.currentPage < items.lastIndex -> pagerState.currentPage + 1
                 !goingForward && pagerState.currentPage > 0 -> pagerState.currentPage - 1
                 else -> {
                     goingForward = !goingForward
                     pagerState.currentPage + if (goingForward) 1 else -1
                 }
             }
-
             pagerState.animateScrollToPage(
-                page = nextPage,
+                page = next,
                 animationSpec = tween(
-                    durationMillis = 1000,
+                    durationMillis = animationMillis,
                     easing = FastOutSlowInEasing
                 )
             )
         }
     }
 
+    HorizontalPager(
+        state = pagerState,
+        userScrollEnabled = false,
+        modifier = modifier
+    ) { page ->
+        pageContent(items[page])
+    }
+}
 
-
+@Composable
+fun TextOverlay(
+    text: String,
+    modifier: Modifier = Modifier
+) {
     Box(
-        contentAlignment = Alignment.BottomStart
+        modifier = modifier
+            .background(Color.Black.copy(alpha = 0.3f))
+            .padding(start = 5.dp, end = 6.dp)
     ) {
-        HorizontalPager(
-            modifier = Modifier.fillMaxWidth(),
-            state = pagerState,
-            userScrollEnabled = false
-        ) {
-            AssetImage(
-                assetPath = city.photo[it]
-            )
-        }
-        Box(
-            modifier = Modifier
-                .background(Color.Black.copy(alpha = 0.3f))
-                .padding(start = 5.dp)
-        ) {
-            Text(
-                modifier = Modifier.padding(end = 6.dp),
-                text = city.city,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 36.sp,
-                color = Color.White
-            )
-        }
+        Text(
+            text = text,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 36.sp,
+            color = Color.White
+        )
     }
 }
 
