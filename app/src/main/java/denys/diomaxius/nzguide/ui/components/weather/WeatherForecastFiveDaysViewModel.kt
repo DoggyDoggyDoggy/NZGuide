@@ -1,4 +1,4 @@
-package denys.diomaxius.nzguide.ui.screen
+package denys.diomaxius.nzguide.ui.components.weather
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -11,8 +11,10 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+private const val DEFAULT_API_KEY = "896839603a110dc1ea4f2d74b512605d"
+
 @HiltViewModel
-class HomeTestViewModel @Inject constructor(
+class WeatherForecastFiveDaysViewModel @Inject constructor(
     private val getForecastUseCase: GetForecastUseCase
 ) : ViewModel() {
     private val _forecast = MutableStateFlow<List<DailyForecast>>(emptyList())
@@ -22,9 +24,12 @@ class HomeTestViewModel @Inject constructor(
         getForecast()
     }
 
-    fun getForecast() {
+    fun getForecast(
+        city: String = "Hamilton,NZ",
+        apiKey: String = DEFAULT_API_KEY
+    ) {
         viewModelScope.launch {
-            _forecast.value = getForecastUseCase("Hamilton,NZ", "896839603a110dc1ea4f2d74b512605d")
+            _forecast.value = getForecastUseCase(city, apiKey)
         }
     }
 }
