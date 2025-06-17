@@ -54,13 +54,7 @@ class EventsRowViewModel @Inject constructor(
             )
         }
     }.cachedIn(viewModelScope)
-
     val eventsPager: Flow<PagingData<Event>> = _eventsPager
-
-    init {
-    setLocationFilter(42)
-    setWeekDate()
-    }
 
     fun setLocationFilter(id: Int) {
         locationFlow.value = id

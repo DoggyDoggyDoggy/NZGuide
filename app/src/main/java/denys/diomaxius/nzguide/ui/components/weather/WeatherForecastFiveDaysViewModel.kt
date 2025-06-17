@@ -20,12 +20,8 @@ class WeatherForecastFiveDaysViewModel @Inject constructor(
     private val _forecast = MutableStateFlow<List<DailyForecast>>(emptyList())
     val forecast: StateFlow<List<DailyForecast>> = _forecast.asStateFlow()
 
-    init {
-        getForecast()
-    }
-
     fun getForecast(
-        city: String = "hamilton,NZ",
+        city: String,
         apiKey: String = DEFAULT_API_KEY
     ) {
         viewModelScope.launch {

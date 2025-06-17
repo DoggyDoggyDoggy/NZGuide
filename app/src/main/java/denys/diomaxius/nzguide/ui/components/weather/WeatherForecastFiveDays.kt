@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -15,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import denys.diomaxius.nzguide.domain.model.events.City
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -23,9 +25,16 @@ private const val ICON_BASE_URL = "https://openweathermap.org/img/wn/"
 
 @Composable
 fun WeatherForecastFiveDays(
-    viewModel: WeatherForecastFiveDaysViewModel = hiltViewModel()
+    viewModel: WeatherForecastFiveDaysViewModel = hiltViewModel(),
+    city: City
 ) {
     val forecast by viewModel.forecast.collectAsState()
+
+    LaunchedEffect(city) {
+        viewModel.getForecast(
+            city = city.cityName+",NZ"
+        )
+    }
 
     Row(
         modifier = Modifier.fillMaxWidth()

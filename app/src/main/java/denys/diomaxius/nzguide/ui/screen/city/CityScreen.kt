@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
+import denys.diomaxius.nzguide.domain.model.events.City
 import denys.diomaxius.nzguide.ui.components.cityphotoslider.CityPhotoSlider
 import denys.diomaxius.nzguide.ui.components.cityphotoslider.citiesPhotoSlider
 import denys.diomaxius.nzguide.ui.components.events.EventsRow
@@ -15,7 +16,8 @@ import denys.diomaxius.nzguide.ui.components.weather.WeatherForecastFiveDays
 
 @Composable
 fun CityScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    city: City = City.HAMILTON
 ) {
     Column(
         modifier = modifier.fillMaxSize()
@@ -30,12 +32,16 @@ fun CityScreen(
             modifier = Modifier.height(8.dp)
         )
 
-        WeatherForecastFiveDays()
+        WeatherForecastFiveDays(
+            city = city
+        )
 
         Spacer(
             modifier = Modifier.height(8.dp)
         )
 
-        EventsRow()
+        EventsRow(
+            city = city
+        )
     }
 }

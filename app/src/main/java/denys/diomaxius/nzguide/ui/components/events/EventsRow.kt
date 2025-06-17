@@ -11,6 +11,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -23,14 +24,21 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import coil3.compose.AsyncImage
+import denys.diomaxius.nzguide.domain.model.events.City
 import denys.diomaxius.nzguide.domain.model.events.Event
 
 @Composable
 fun EventsRow(
     modifier: Modifier = Modifier,
-    viewModel: EventsRowViewModel = hiltViewModel()
+    viewModel: EventsRowViewModel = hiltViewModel(),
+    city: City
 ) {
     val eventsPager = viewModel.eventsPager.collectAsLazyPagingItems()
+
+    LaunchedEffect(city) {
+        viewModel.setLocationFilter(city.id)
+        viewModel.setWeekDate()
+    }
 
     Content(
         modifier = modifier,
