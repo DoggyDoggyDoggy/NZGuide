@@ -21,18 +21,18 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-data class Event(
+data class DevEvent(
     val name: String
 )
 
-val events = listOf<Event>(
-    Event(
+val devEvents = listOf<DevEvent>(
+    DevEvent(
         name = "LONG NAME OF THE EVENT LONG NAME OF THE EVENT"
     ),
-    Event(
+    DevEvent(
         name = "Events"
     ),
-    Event(
+    DevEvent(
         name = "Events"
     )
 )
@@ -59,7 +59,7 @@ fun EventsRow(modifier: Modifier = Modifier) {
         )
 
         LazyRow {
-            items(events) {
+            items(devEvents) {
                 EventCard(it)
             }
         }
@@ -68,7 +68,7 @@ fun EventsRow(modifier: Modifier = Modifier) {
 
 @Composable
 fun EventCard(
-    event: Event
+    devEvent: DevEvent
 ) {
     Card(
         modifier = Modifier
@@ -93,7 +93,7 @@ fun EventCard(
                     modifier = Modifier
                         .padding(horizontal = 12.dp)
                         .padding(top = 4.dp),
-                    text = event.name,
+                    text = devEvent.name,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
                 )

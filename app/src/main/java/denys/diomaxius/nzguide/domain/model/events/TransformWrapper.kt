@@ -1,4 +1,4 @@
-package denys.diomaxius.nzevents.domain.model
+package denys.diomaxius.nzguide.domain.model.events
 
 data class TransformWrapper(
     val transforms: List<ImageTransform>

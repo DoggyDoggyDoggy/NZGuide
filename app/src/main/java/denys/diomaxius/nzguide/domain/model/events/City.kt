@@ -1,4 +1,4 @@
-package denys.diomaxius.nzevents.domain.model
+package denys.diomaxius.nzguide.domain.model.events
 
 enum class City(val id: Int, val cityName: String) {
     AUCKLAND(2, "Auckland"),

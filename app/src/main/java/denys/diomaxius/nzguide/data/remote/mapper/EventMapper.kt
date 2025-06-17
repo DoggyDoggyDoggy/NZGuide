@@ -1,13 +1,13 @@
 package denys.diomaxius.nzguide.data.remote.mapper
 
-import denys.diomaxius.nzevents.domain.model.Event
-import denys.diomaxius.nzevents.domain.model.Events
-import denys.diomaxius.nzevents.domain.model.Session
-import denys.diomaxius.nzevents.domain.model.SessionsWrapper
+import denys.diomaxius.nzguide.domain.model.events.Event
+import denys.diomaxius.nzguide.domain.model.events.Events
 import denys.diomaxius.nzguide.data.remote.dto.EventDto
 import denys.diomaxius.nzguide.data.remote.dto.EventsResponseDto
 import denys.diomaxius.nzguide.data.remote.dto.SessionDto
 import denys.diomaxius.nzguide.data.remote.dto.SessionsWrapperDto
+import denys.diomaxius.nzguide.domain.model.events.Session
+import denys.diomaxius.nzguide.domain.model.events.SessionsWrapper
 
 
 fun EventsResponseDto.toDomain(): Events = Events(

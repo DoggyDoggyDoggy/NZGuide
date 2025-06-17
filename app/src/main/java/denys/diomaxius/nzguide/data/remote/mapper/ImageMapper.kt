@@ -1,13 +1,13 @@
 package denys.diomaxius.nzguide.data.remote.mapper
 
-import denys.diomaxius.nzevents.domain.model.Image
-import denys.diomaxius.nzevents.domain.model.ImageTransform
-import denys.diomaxius.nzevents.domain.model.ImageWrapper
-import denys.diomaxius.nzevents.domain.model.TransformWrapper
+import denys.diomaxius.nzguide.domain.model.events.Image
 import denys.diomaxius.nzguide.data.remote.dto.ImageDto
 import denys.diomaxius.nzguide.data.remote.dto.ImageTransformDto
 import denys.diomaxius.nzguide.data.remote.dto.ImageWrapperDto
 import denys.diomaxius.nzguide.data.remote.dto.TransformWrapperDto
+import denys.diomaxius.nzguide.domain.model.events.ImageTransform
+import denys.diomaxius.nzguide.domain.model.events.ImageWrapper
+import denys.diomaxius.nzguide.domain.model.events.TransformWrapper
 
 fun ImageWrapperDto.toDomain(): ImageWrapper = ImageWrapper(
     images = this.images.map { it.toDomain()  }
