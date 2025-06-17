@@ -2,7 +2,7 @@ package denys.diomaxius.nzguide.data.repository
 
 import denys.diomaxius.nzguide.data.remote.api.WeatherApi
 import denys.diomaxius.nzguide.data.remote.mapper.toDailyForecastList
-import denys.diomaxius.nzguide.domain.model.DailyForecast
+import denys.diomaxius.nzguide.domain.model.weather.DailyForecast
 import denys.diomaxius.nzguide.domain.repository.WeatherRepository
 import javax.inject.Inject
 

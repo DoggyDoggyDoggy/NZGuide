@@ -1,6 +1,6 @@
 package denys.diomaxius.nzguide.domain.usecase
 
-import denys.diomaxius.nzguide.domain.model.DailyForecast
+import denys.diomaxius.nzguide.domain.model.weather.DailyForecast
 import denys.diomaxius.nzguide.domain.repository.WeatherRepository
 import javax.inject.Inject
 

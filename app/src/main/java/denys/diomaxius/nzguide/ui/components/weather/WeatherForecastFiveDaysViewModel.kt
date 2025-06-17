@@ -3,7 +3,7 @@ package denys.diomaxius.nzguide.ui.components.weather
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import denys.diomaxius.nzguide.domain.model.DailyForecast
+import denys.diomaxius.nzguide.domain.model.weather.DailyForecast
 import denys.diomaxius.nzguide.domain.usecase.GetForecastUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

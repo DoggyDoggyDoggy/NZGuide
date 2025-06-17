@@ -1,4 +1,4 @@
-package denys.diomaxius.nzguide.domain.model
+package denys.diomaxius.nzguide.domain.model.app
 
 data class CityPhotoSlider(
     val city: String,

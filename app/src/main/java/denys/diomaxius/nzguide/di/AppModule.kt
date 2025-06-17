@@ -15,7 +15,7 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideEventFindApi(): WeatherApi = RetrofitClient.api
+    fun provideEventFindApi(): WeatherApi = RetrofitClient.weatherApi
 
     @Provides
     @Singleton

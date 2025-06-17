@@ -1,6 +1,6 @@
 package denys.diomaxius.nzguide.ui.components.cityphotoslider
 
-import denys.diomaxius.nzguide.domain.model.CityPhotoSlider
+import denys.diomaxius.nzguide.domain.model.app.CityPhotoSlider
 
 val citiesPhotoSlider = listOf<CityPhotoSlider>(
     CityPhotoSlider(
