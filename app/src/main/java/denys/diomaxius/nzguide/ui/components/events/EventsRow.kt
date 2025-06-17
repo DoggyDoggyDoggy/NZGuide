@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
@@ -20,25 +19,29 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-
-data class DevEvent(
-    val name: String
-)
-
-val devEvents = listOf<DevEvent>(
-    DevEvent(
-        name = "LONG NAME OF THE EVENT LONG NAME OF THE EVENT"
-    ),
-    DevEvent(
-        name = "Events"
-    ),
-    DevEvent(
-        name = "Events"
-    )
-)
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.paging.compose.LazyPagingItems
+import androidx.paging.compose.collectAsLazyPagingItems
+import denys.diomaxius.nzguide.domain.model.events.Event
 
 @Composable
-fun EventsRow(modifier: Modifier = Modifier) {
+fun EventsRow(
+    modifier: Modifier = Modifier,
+    viewModel: EventsRowViewModel = hiltViewModel()
+) {
+    val eventsPager = viewModel.eventsPager.collectAsLazyPagingItems()
+
+    Content(
+        modifier = modifier,
+        eventsPager = eventsPager
+    )
+}
+
+@Composable
+fun Content(
+    modifier: Modifier = Modifier,
+    eventsPager: LazyPagingItems<Event>
+) {
     Column(
         modifier = modifier
     ) {
@@ -59,8 +62,11 @@ fun EventsRow(modifier: Modifier = Modifier) {
         )
 
         LazyRow {
-            items(devEvents) {
-                EventCard(it)
+            items(count = eventsPager.itemCount) { index ->
+                val event = eventsPager[index]
+                EventCard(
+                    event = event!!
+                )
             }
         }
     }
@@ -68,7 +74,7 @@ fun EventsRow(modifier: Modifier = Modifier) {
 
 @Composable
 fun EventCard(
-    devEvent: DevEvent
+    event: Event
 ) {
     Card(
         modifier = Modifier
@@ -93,7 +99,7 @@ fun EventCard(
                     modifier = Modifier
                         .padding(horizontal = 12.dp)
                         .padding(top = 4.dp),
-                    text = devEvent.name,
+                    text = event.name,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
                 )
