@@ -22,9 +22,11 @@ import denys.diomaxius.nzguide.domain.model.CityPhotoSlider
 
 @Composable
 fun CityPhotoSlider(
+    modifier: Modifier = Modifier,
     city: CityPhotoSlider
 ) {
     Box(
+        modifier = modifier,
         contentAlignment = Alignment.BottomStart
     ) {
         AutoScrollPager(

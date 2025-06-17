@@ -4,8 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import dagger.hilt.android.AndroidEntryPoint
-import denys.diomaxius.nzguide.ui.components.cityphotoslider.CityPhotoSlider
-import denys.diomaxius.nzguide.ui.components.cityphotoslider.citiesPhotoSlider
+import denys.diomaxius.nzguide.ui.screen.city.CityScreen
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -13,9 +12,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-            CityPhotoSlider(
-                citiesPhotoSlider[0]
-            )
+            CityScreen()
         }
     }
 }
