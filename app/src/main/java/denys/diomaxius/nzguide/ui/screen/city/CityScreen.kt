@@ -8,9 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
-import denys.diomaxius.nzguide.domain.model.events.City
+import denys.diomaxius.nzguide.domain.model.app.City
 import denys.diomaxius.nzguide.ui.components.cityphotoslider.CityPhotoSlider
-import denys.diomaxius.nzguide.ui.components.cityphotoslider.citiesPhotoSlider
 import denys.diomaxius.nzguide.ui.components.events.EventsRow
 import denys.diomaxius.nzguide.ui.components.weather.WeatherForecastFiveDays
 
@@ -25,7 +24,7 @@ fun CityScreen(
         CityPhotoSlider(
             modifier = Modifier
                 .shadow(12.dp),
-            city = citiesPhotoSlider[0]
+            city = city
         )
 
         Spacer(

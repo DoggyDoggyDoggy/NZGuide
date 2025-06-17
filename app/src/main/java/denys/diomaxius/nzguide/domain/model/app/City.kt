@@ -1,6 +1,9 @@
-package denys.diomaxius.nzguide.domain.model.events
+package denys.diomaxius.nzguide.domain.model.app
 
-enum class City(val id: Int, val cityName: String) {
+enum class City(
+    val id: Int,
+    val cityName: String
+) {
     AUCKLAND(2, "Auckland"),
     HAMILTON(42, "Hamilton"),
     ROTORUA(57, "Rotorua"),
@@ -17,6 +20,7 @@ enum class City(val id: Int, val cityName: String) {
     INVERCARGILL(137, "Invercargill"),
     QUEENSTOWNS(130, "Queenstown");
 }
+
 
 /*
 WAIKATO 3

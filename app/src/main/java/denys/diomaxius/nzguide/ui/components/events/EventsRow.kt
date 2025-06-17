@@ -24,7 +24,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import coil3.compose.AsyncImage
-import denys.diomaxius.nzguide.domain.model.events.City
+import denys.diomaxius.nzguide.domain.model.app.City
 import denys.diomaxius.nzguide.domain.model.events.Event
 
 @Composable

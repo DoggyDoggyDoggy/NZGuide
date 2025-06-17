@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
-import denys.diomaxius.nzguide.domain.model.events.City
+import denys.diomaxius.nzguide.domain.model.app.City
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale

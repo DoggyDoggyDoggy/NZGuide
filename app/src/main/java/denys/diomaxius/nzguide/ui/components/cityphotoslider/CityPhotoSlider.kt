@@ -18,26 +18,29 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import denys.diomaxius.nzguide.domain.model.app.CityPhotoSlider
+import denys.diomaxius.nzguide.domain.model.app.City
+import denys.diomaxius.nzguide.domain.model.app.citiesPhotoSlider
 
 @Composable
 fun CityPhotoSlider(
     modifier: Modifier = Modifier,
-    city: CityPhotoSlider
+    city: City
 ) {
+    val photoSlider = citiesPhotoSlider.getValue(city)
+
     Box(
         modifier = modifier,
         contentAlignment = Alignment.BottomStart
     ) {
         AutoScrollPager(
-            items = city.photo,
+            items = photoSlider.photo,
             modifier = Modifier
                 .fillMaxWidth()
         ) { assetPath ->
             AssetImage(assetPath)
         }
 
-        TextOverlay(city.city)
+        TextOverlay(city.name)
     }
 }
 
