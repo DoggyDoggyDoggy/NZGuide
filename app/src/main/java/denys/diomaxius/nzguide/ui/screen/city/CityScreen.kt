@@ -16,7 +16,7 @@ import denys.diomaxius.nzguide.ui.components.weather.WeatherForecastFiveDays
 @Composable
 fun CityScreen(
     modifier: Modifier = Modifier,
-    city: City = City.HAMILTON
+    city: City = City(42, "Hamilton", listOf("hamilton/1.jpg", "hamilton/2.jpg", "hamilton/3.jpg"))
 ) {
     Column(
         modifier = modifier.fillMaxSize()
