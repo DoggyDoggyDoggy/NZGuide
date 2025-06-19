@@ -2,6 +2,7 @@ package denys.diomaxius.nzguide.ui.screen.home
 
 import android.graphics.BitmapFactory
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -19,7 +20,10 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import denys.diomaxius.nzguide.domain.model.app.City
+import denys.diomaxius.nzguide.navigation.LocalNavController
+import denys.diomaxius.nzguide.navigation.NavScreen
 import denys.diomaxius.nzguide.ui.components.TextOverlay
 
 @Composable
@@ -27,11 +31,13 @@ fun HomeScreen(
     viewModel: HomeScreenViewModel = hiltViewModel()
 ) {
     val cities by viewModel.cities.collectAsState()
+    val navHostController = LocalNavController.current
 
     LazyColumn {
         items(cities) {
             CityCard(
-                city = it
+                city = it,
+                navHostController = navHostController
             )
         }
     }
@@ -39,7 +45,8 @@ fun HomeScreen(
 
 @Composable
 fun CityCard(
-    city: City
+    city: City,
+    navHostController: NavHostController
 ) {
     val context = LocalContext.current
     val imageBitmap = remember {
@@ -52,6 +59,13 @@ fun CityCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(12.dp)
+            .clickable {
+                navHostController.navigate(
+                    NavScreen.City.createRoute(city.id)
+                ) {
+                    launchSingleTop = true
+                }
+            }
     ) {
         Box(
             contentAlignment = Alignment.BottomStart

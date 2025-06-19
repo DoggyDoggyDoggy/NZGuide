@@ -5,19 +5,23 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
-import denys.diomaxius.nzguide.domain.model.app.City
+import androidx.hilt.navigation.compose.hiltViewModel
 import denys.diomaxius.nzguide.ui.components.cityphotoslider.CityPhotoSlider
 import denys.diomaxius.nzguide.ui.components.events.EventsRow
 import denys.diomaxius.nzguide.ui.components.weather.WeatherForecastFiveDays
+import androidx.compose.runtime.getValue
 
 @Composable
 fun CityScreen(
     modifier: Modifier = Modifier,
-    city: City = City(42, "Hamilton", listOf("hamilton/1.jpg", "hamilton/2.jpg", "hamilton/3.jpg"))
+    viewModel: CityScreenViewModel = hiltViewModel()
 ) {
+    val city by viewModel.city.collectAsState()
+
     Column(
         modifier = modifier.fillMaxSize()
     ) {
