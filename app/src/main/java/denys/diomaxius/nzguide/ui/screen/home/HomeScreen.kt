@@ -24,7 +24,6 @@ import denys.diomaxius.nzguide.ui.components.TextOverlay
 
 @Composable
 fun HomeScreen(
-    modifier: Modifier = Modifier,
     viewModel: HomeScreenViewModel = hiltViewModel()
 ) {
     val cities by viewModel.cities.collectAsState()
