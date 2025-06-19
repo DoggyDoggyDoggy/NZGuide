@@ -23,6 +23,8 @@ class CityRepositoryImpl : CityRepository {
     )
 
     override fun getAllCities(): List<City> = allCities
+
+    override fun getCityById(id: Int): City = allCities.find { it.id == id }!!
 }
 
 /*
