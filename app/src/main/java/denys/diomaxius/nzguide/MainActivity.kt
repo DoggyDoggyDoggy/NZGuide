@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import dagger.hilt.android.AndroidEntryPoint
-import denys.diomaxius.nzguide.ui.screen.city.CityScreen
+import denys.diomaxius.nzguide.ui.screen.home.HomeScreen
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -12,7 +12,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-            CityScreen()
+            HomeScreen()
         }
     }
 }
