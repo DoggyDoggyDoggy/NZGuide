@@ -5,4 +5,7 @@ sealed class NavScreen(val route: String) {
     object City : NavScreen("city/{cityId}") {
         fun createRoute(cityId: Int) : String = "city/$cityId"
     }
+    object Event : NavScreen("event/{eventId}") {
+        fun createRoute(eventId: String): String = "event/$eventId"
+    }
 }

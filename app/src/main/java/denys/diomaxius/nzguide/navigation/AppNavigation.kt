@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import denys.diomaxius.nzevents.ui.screen.event.EventDetailsScreen
 import denys.diomaxius.nzguide.ui.screen.city.CityScreen
 import denys.diomaxius.nzguide.ui.screen.home.HomeScreen
 
@@ -23,16 +24,16 @@ fun AppNavigation(
             navController = navHostController,
             startDestination = NavScreen.Home.route
         ) {
-            composable(
-                route = NavScreen.Home.route
-            ) {
+            composable(NavScreen.Home.route) {
                 HomeScreen()
             }
 
-            composable(
-                route = NavScreen.City.route
-            ) {
+            composable(NavScreen.City.route) {
                 CityScreen()
+            }
+
+            composable(NavScreen.Event.route) {
+                EventDetailsScreen()
             }
         }
     }

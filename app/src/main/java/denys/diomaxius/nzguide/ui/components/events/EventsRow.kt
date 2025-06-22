@@ -1,5 +1,6 @@
 package denys.diomaxius.nzguide.ui.components.events
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,18 +28,21 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import coil3.compose.AsyncImage
 import denys.diomaxius.nzguide.domain.model.app.City
 import denys.diomaxius.nzguide.domain.model.events.Event
+import denys.diomaxius.nzguide.navigation.NavScreen
 
 @Composable
 fun EventsRow(
     modifier: Modifier = Modifier,
     viewModel: EventsRowViewModel = hiltViewModel(),
-    city: City
+    city: City,
+    navHostController: NavHostController
 ) {
     val eventsPager = viewModel.eventsPager.collectAsLazyPagingItems()
 
@@ -49,7 +53,8 @@ fun EventsRow(
 
     Content(
         modifier = modifier,
-        eventsPager = eventsPager
+        eventsPager = eventsPager,
+        navHostController = navHostController
     )
 
 }
@@ -57,7 +62,8 @@ fun EventsRow(
 @Composable
 fun Content(
     modifier: Modifier = Modifier,
-    eventsPager: LazyPagingItems<Event>
+    eventsPager: LazyPagingItems<Event>,
+    navHostController: NavHostController
 ) {
     val loadState = eventsPager.loadState
 
@@ -93,7 +99,8 @@ fun Content(
                 items(count = eventsPager.itemCount) { index ->
                     val event = eventsPager[index]
                     EventCard(
-                        event = event!!
+                        event = event!!,
+                        navHostController = navHostController
                     )
                 }
 
@@ -145,12 +152,18 @@ fun LoadingCard() {
 
 @Composable
 fun EventCard(
-    event: Event
+    event: Event,
+    navHostController: NavHostController
 ) {
     Card(
         modifier = Modifier
             .padding(start = 12.dp)
-            .size(175.dp),
+            .size(175.dp)
+            .clickable{
+                navHostController.navigate(NavScreen.Event.createRoute(event.id)) {
+                    launchSingleTop = true
+                }
+            },
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color.White

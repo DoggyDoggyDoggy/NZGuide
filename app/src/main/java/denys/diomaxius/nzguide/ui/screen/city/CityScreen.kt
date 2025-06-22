@@ -14,6 +14,7 @@ import denys.diomaxius.nzguide.ui.components.cityphotoslider.CityPhotoSlider
 import denys.diomaxius.nzguide.ui.components.events.EventsRow
 import denys.diomaxius.nzguide.ui.components.weather.WeatherForecastFiveDays
 import androidx.compose.runtime.getValue
+import denys.diomaxius.nzguide.navigation.LocalNavController
 
 @Composable
 fun CityScreen(
@@ -21,6 +22,7 @@ fun CityScreen(
     viewModel: CityScreenViewModel = hiltViewModel()
 ) {
     val city by viewModel.city.collectAsState()
+    val  navHostController = LocalNavController.current
 
     Column(
         modifier = modifier.fillMaxSize()
@@ -44,7 +46,8 @@ fun CityScreen(
         )
 
         EventsRow(
-            city = city
+            city = city,
+            navHostController = navHostController
         )
     }
 }
