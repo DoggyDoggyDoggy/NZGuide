@@ -1,9 +1,12 @@
 package denys.diomaxius.nzguide.di
 
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import denys.diomaxius.nzguide.data.local.datasource.CityAssetsSource
 import denys.diomaxius.nzguide.data.remote.api.EventsFindApi
 import denys.diomaxius.nzguide.data.remote.api.WeatherApi
 import denys.diomaxius.nzguide.data.remote.network.RetrofitClient
@@ -37,6 +40,12 @@ object AppModule {
         EventsRepositoryImpl(eventsApi)
 
     @Provides
+    fun provideAssetsSource(@ApplicationContext ctx: Context) =
+        CityAssetsSource(ctx)
+
+    @Provides
     @Singleton
-    fun provideCityRepository(): CityRepository = CityRepositoryImpl()
+    fun provideCityRepository(
+        cityAssetsSource: CityAssetsSource
+    ): CityRepository = CityRepositoryImpl(cityAssetsSource)
 }

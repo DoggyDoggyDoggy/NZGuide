@@ -1,9 +1,15 @@
 package denys.diomaxius.nzguide.data.repository
 
+import denys.diomaxius.nzguide.data.local.datasource.CityAssetsSource
+import denys.diomaxius.nzguide.data.local.mapper.toDomain
 import denys.diomaxius.nzguide.domain.model.app.City
+import denys.diomaxius.nzguide.domain.model.app.CityPlaceTopic
 import denys.diomaxius.nzguide.domain.repository.CityRepository
+import javax.inject.Inject
 
-class CityRepositoryImpl : CityRepository {
+class CityRepositoryImpl @Inject constructor(
+    private val cityAssetsSource: CityAssetsSource
+) : CityRepository {
     private val allCities = listOf(
         City(42,  "Hamilton", listOf("hamilton/1.jpg", "hamilton/2.jpg", "hamilton/3.jpg"), "hamilton/hamilton.json"),
         City(363, "Wellington", listOf("wellington/1.jpg", "wellington/2.jpg", "wellington/3.jpg"), "wellington/wellington.json"),
@@ -25,6 +31,10 @@ class CityRepositoryImpl : CityRepository {
     override fun getAllCities(): List<City> = allCities
 
     override fun getCityById(id: Int): City = allCities.find { it.id == id }!!
+
+    override fun getCityPlaces(cityPlaces: String): List<CityPlaceTopic> {
+        return cityAssetsSource.loadCityPlacesJson(cityPlaces).toDomain()
+    }
 }
 
 /*

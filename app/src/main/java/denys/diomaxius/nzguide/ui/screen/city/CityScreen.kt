@@ -55,6 +55,8 @@ fun CityScreen(
             modifier = Modifier.height(16.dp)
         )
 
-        CityPlacesScreen()
+        CityPlacesScreen(
+            city = city
+        )
     }
 }

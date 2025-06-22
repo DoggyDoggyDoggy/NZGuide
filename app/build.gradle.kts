@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt)
     id("kotlin-kapt")
+    id ("org.jetbrains.kotlin.plugin.serialization") version "1.9.10"
 }
 
 android {
@@ -49,6 +50,9 @@ android {
 }
 
 dependencies {
+    //Serialization
+    implementation (libs.kotlinx.serialization.json)
+
     //Paging
     implementation(libs.androidx.paging.runtime)
     implementation (libs.androidx.paging.compose)
