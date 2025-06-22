@@ -15,6 +15,7 @@ import denys.diomaxius.nzguide.ui.components.events.EventsRow
 import denys.diomaxius.nzguide.ui.components.weather.WeatherForecastFiveDays
 import androidx.compose.runtime.getValue
 import denys.diomaxius.nzguide.navigation.LocalNavController
+import denys.diomaxius.nzguide.ui.components.cityplaces.CityPlacesScreen
 
 @Composable
 fun CityScreen(
@@ -49,5 +50,11 @@ fun CityScreen(
             city = city,
             navHostController = navHostController
         )
+
+        Spacer(
+            modifier = Modifier.height(16.dp)
+        )
+
+        CityPlacesScreen()
     }
 }

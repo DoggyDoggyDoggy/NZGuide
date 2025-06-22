@@ -6,3 +6,8 @@ data class City(
     val photo: List<String>,
     val cityPlacesTopics: String
 )
+
+data class CityPlaceTopic(
+    val title: String,
+    val paragraph: String
+)
