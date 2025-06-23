@@ -1,12 +1,34 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Pukekura Park",
+      "paragraph": "Pukekura Park covers 52ha (128 acres) right in the heart of New Plymouth, Taranaki and is one of New Zealand's premier botanical gardens. The park has an international Green Flag award and is a Garden of National Significance. With a diverse range of landscapes, the park features bush walks, formal gardens, lakes, children's play areas, a sports area and a Tea House.",
+      "image": "newplymouth/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "New Plymouth Coastal Walkway",
+      "paragraph": "Utterly spectacular 11km long walkway along the seafront in New Plymouth, New Zealand. Walk, ride skate or scoot from Bell Block in the north to Port Taranaki to the south taking in the stunning Te Rewa Rewa Bridge, three swimming beaches, a golf club, rolling farm land, rivers and various accessways to residential and shopping areas.",
+      "image": "newplymouth/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Puke Ariki",
+      "paragraph": "Welcome to Puke Ariki - an integrated knowledge hub comprising museum, library, research centre, museum store and i-SITE for a visitor experience that is like no other. Puke Ariki is a place where people come together and where there is a place for everyone. Sited in New Plymouth, between the majestic Mount Taranaki and the wild Tasman Sea, Puke Ariki is a place of wonder, of excitement, of discovery and adventure.",
+      "image": "newplymouth/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Pukeiti",
+      "paragraph": "Explore a wonderland of rhododendrons planted within 360 hectares of rainforest, located between Mount Taranaki and the coast, just south of New Plymouth. Established in 1951, Pukeiti is an internationally recognised garden with one of the most diverse collections of rhododendrons on display anywhere in the world.",
+      "image": "newplymouth/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "Brooklands Zoo",
+      "paragraph": "Brooklands Zoo is a FREE, family focused zoo which is home to a variety of farmyard animals, amphibians, reptiles, oriental small-clawed otters, meerkats, a brolga, Bolivian squirrel monkeys and both capuchin and cotton-top tamarin monkeys, as well as a selection of exotic parrots housed inside a walk-through free-flight aviary.",
+      "image": "newplymouth/cityplacephoto/5.jpg"
+    },
+    {
+      "title": "Lake Mangamahoe",
+      "paragraph": "",
+      "image": "newplymouth/cityplacephoto/6.jpg"
     }
   ]
 }
