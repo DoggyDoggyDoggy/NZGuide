@@ -1,12 +1,29 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Whangarei Falls",
+      "paragraph": "",
+      "image": "whangarei/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Whangārei Quarry Gardens",
+      "paragraph": "Whangārei Quarry Gardens is a subtropical oasis created by volunteers in the remnants of a former quarry in Te Tai Tokerau (Northland), Aotearoa (New Zealand). The Gardens are open to the public and feature subtropical gardens, rare plant species, waterfalls, and streams. Ruins from the original quarrying days create an interesting backdrop to plantings and serve as a reminder of the site's industrial heritage.",
+      "image": "whangarei/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Ruakaka Beach",
+      "paragraph": "",
+      "image": "whangarei/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Hundertwasser Art Centre With Wairau Māori Art Gallery",
+      "paragraph": "Step inside and be captivated by the unique architecture of the last authentic building in the world designed by Friedensreich Hundertwasser. Be inspired by the largest collection of his original artworks outside of Vienna, each piece reflecting his vibrant spirit and innovative ideas. This is more than just a visit; it’s an immersive experience that celebrates creativity and sustainability. ",
+      "image": "whangarei/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "Poor Knights Island Marine Reserve",
+      "paragraph": "World-renowned diver Jacques-Yves Cousteau rated this reserve, notable for its excellent visibility, as one of the top ten places to dive in the world.",
+      "image": "whangarei/cityplacephoto/5.jpg"
     }
   ]
 }
