@@ -1,12 +1,29 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Te Manawa Museum of Art, Science & Heritage",
+      "paragraph": "At the cultural heart of our city, Te Manawa draws art, science and heritage together to reflect our past, illuminate the present and inspire a creative and sustainable future for our growing region and its people. Our public want deeper and more energetic access to their museums. They want to see and hear their stories told, in their own voices. They are right to demand inclusion, representation and participation. These make for personal experiences that touch them emotionally, inspire them creatively and give life and mana to their collective heritage – making for an exciting place to live. ",
+      "image": "palmerstonnorth/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "New Zealand Rugby Museum",
+      "paragraph": "The sport that shaped a nation. How did rugby come to play such an important role in the culture and heritage of New Zealand, and why are the All Blacks so good? Explore the rich history and folklore of the nation's game, see some of the world's rarest rugby artefacts, and learn about some of our rugby greats. You can get active by testing your rugby skills in the dedicated \"Have A Go\" area and measure yourself against the best.",
+      "image": "palmerstonnorth/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Dugald MacKenzie Rose Garden",
+      "paragraph": "Nestled inside Victoria Esplanade, Palmy's iconic rose garden is a beautiful (and popular) spot for a garden wedding, or simply book it for your photos. Don't let yourself be limited by what you can use this space for though. In past years it's also been the scene of the city's Summer Shakespeare theatre productions.",
+      "image": "palmerstonnorth/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Lido Aquatic Centre",
+      "paragraph": "",
+      "image": "palmerstonnorth/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "Cathedral of the Holy Spirit",
+      "paragraph": "",
+      "image": "palmerstonnorth/cityplacephoto/5.jpg"
     }
   ]
 }
