@@ -1,12 +1,39 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Museum of New Zealand Te Papa Tongarewa",
+      "paragraph": "Experience the whole of New Zealand in one building! Te Papa is New Zealand's bold, innovative and interactive national museum. Explore the great treasures and stories of this country, its unique natural environment, Maori culture and taonga (treasures), dynamic art heritage, and its fascinating history. Te Papa is located on Wellington's spectacular waterfront. Open 10am to 6pm every day except Christmas Day. General admission is free for New Zealand residents.",
+      "image": "wellington/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "ZEALANDIA Ecosanctuary",
+      "paragraph": "Imagine a lush forest full of rare native wildlife. Discover Zealandia Te Māra a Tāne, an ecosanctuary home to over 40 rare native species and 32km of walking tracks. Explore at your own pace or be led by a guide! Our nature experts will show you the best places to spot wildlife like kakariki, tuatara and takahe on a Zealandia by Day tour. Relax at Rātā cafe with delicious food that gives back to conservation, and admire the views over the lake. ",
+      "image": "wellington/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Wellington Cable Car",
+      "paragraph": "The highlight to any visit to Wellington is a trip on Wellington Cable Car. In just 5 minutes you will reach the top of the Botanic Garden where panoramic views of the city and harbour are the reward. You can also visit the Space Place Observatory here. Before you head back down make sure to visit the Cable Car Museum (free entry), which provides a history of the city's symbolic mode of transport and see the original cars and winding machinery on display. There are walking tracks that start at the top of the Cable Car if you're keen on a stroll back to the city. The Cable Cars leave every 10 minutes and evry 15 minutes before 8pm.",
+      "image": "wellington/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Wellington Botanic Garden",
+      "paragraph": "Visit Wellington Botanic Garden and enjoy its 25ha of unique landscape, protected native forest, conifers, specialised plant collections, colourful floral displays, and views over Wellington city. The garden is a Garden of National Significance by the Royal New Zealand Institute of Horticulture and is an Historic Places Trust Heritage Area. Take the Cable Car up and follow the Downhill path to the city.",
+      "image": "wellington/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "Mount Victoria",
+      "paragraph": "Panoramic lookout with 360-degree city and harbor views, accessible via hikes or drives, showcasing cultural exhibits and scenic trails for outdoor activities.",
+      "image": "wellington/cityplacephoto/5.jpg"
+    },
+    {
+      "title": "Old St Paul's",
+      "paragraph": "Take a seat in this quiet sanctuary and breathe in the beauty of the architecture, stained glass windows and richly coloured furnishings. Become part of the Old St Paul’s story. Constructed between 1865 and 1866 from native timbers, Old St Paul’s is one of the finest examples of Gothic Revival architecture in the world. The building is a handsome sight from the outside. Inside, it is simply breathtaking.",
+      "image": "wellington/cityplacephoto/6.jpg"
+    },
+    {
+      "title": "Wellington Zoo",
+      "paragraph": "Wellington Zoo is New Zealand’s first Zoo, and Wellington’s oldest conservation organisation, caring for animals since 1906. The Zoo is a not for profit charitable trust and we're proud to be the world’s first carboNZero certified zoo. We are guided by our kaupapa Me Tiaki, Kia Ora! We must look after our environment, so all things will flourish. It is up to us collectively to make a difference for animals and the wild places they call home. See our website for entry prices and to plan your visit. If you have accessibility needs, you can find more visitor information on our website.",
+      "image": "wellington/cityplacephoto/7.jpg"
     }
   ]
 }
