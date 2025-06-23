@@ -1,12 +1,39 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Christchurch Gondola Ride",
+      "paragraph": "Pre-book admission to the Christchurch Gondola so you can skip the ticket lines for the best views in Christchurch. This can't-miss attraction, rebuilt since the 2011 earthquake, features views of the city, Lyttelton Harbour, and the Canterbury Plains. This tour also offers an upgrade option to include punting on the Avon River for a comprehensive Christchurch experience.",
+      "image": "christchurch/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Akaroa Dolphins Harbour Nature Cruise",
+      "paragraph": "Spot Akaroa Harbour’s rare Hector’s dolphins on a catamaran wildlife cruise that includes fresh-baked cookies and a drink. The 2-hull catamaran offers more stability and deck space than a single-hull boat, ensuring a comfortable spot as you scan for fur seals, white-flippered penguins, and other wildlife. Dolphin-spotting dogs are on board. Equipped with dog life-vests and a keen ear, they’ll help make your dolphin encounter an unforgettable experience.",
+      "image": "christchurch/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "International Antarctic Centre",
+      "paragraph": "Learn about Antarctic landscapes, wildlife, and explorers with tickets to the International Antarctic Centre in Christchurch. Try to weather a harsh Antarctic storm, hear about life on the remote Scott Base, and spend some quality time with adorable little blue penguins. Enjoy Hägglund rides and 4D shows, and enter the “cuddle zone,” where you can meet fluffy huskies that explorers historically used to pull their Antarctic dog sleds.",
+      "image": "christchurch/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Christchurch Botanic Gardens",
+      "paragraph": "At the heart of Christchurch's reputation as the Garden City, the Gardens are a place of ever-changing beauty. Showcasing flora and fauna of New Zealand and other parts of the world, the Gardens feature one of the finest collections of exotic and local plants in New Zealand. With more than 1.1 Million visitors each year the Botanic Gardens are one of the Christchurch's most popular and well-loved attractions.",
+      "image": "christchurch/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "TranzAlpine Train",
+      "paragraph": "The TranzAlpine is a long-distance train between Christchurch and Greymouth, from one coast of New Zealand to the other. Unlike normal passenger trains, the TranzAlpine is designed to provide a window to New Zealand's best scenery, with large reclined seating and huge panoramic windows. The spectacular TranzAlpine journey begins by roaming through the vast farmsteads of the Canterbury Plains to the spectacular gorges and valleys of the Waimakariri River. The TranzAlpine then ascends into the majestic Southern Alps to Arthurs Pass National Park, before descending through lush beech forest to the West Coast town of Greymouth - a great base for visits to Punakaiki and the always-popular glaciers. All services feature panoramic windows, reclined seating, GPS triggered at-seat commentary, a fully licensed cafe, toilets, and open air viewing deck. The TranzAlpine is operated by Great Journeys New Zealand, and runs Friday-Monday throughout the year.",
+      "image": "christchurch/cityplacephoto/5.jpg"
+    },
+    {
+      "title": "Quake City",
+      "paragraph": "Quake City tells stories of heroism and hope from the Canterbury earthquakes. This special exhibition from Canterbury Museum explains the science and the phenomenon of liquefaction – when the shaking liquefied the ground and it bubbled up burying street and sinking buildings. Quake City charts the aftermaths of the September 2010 and 22 February 2011 earthquakes and the extraordinary response of the emergency services, international rescue teams, the thousands of volunteers who pitched in to help – construction workers, the Student Volunteer Army, the Farmy Army – and the incredible resilience of Canterbury’s communities. The exhibition includes some of the objects which have defined the Canterbury earthquakes including the spire of Christ Church Cathedral and the clocks from the former railway station. Supported by major sponsor Toka Tū Ake EQC",
+      "image": "christchurch/cityplacephoto/6.jpg"
+    },
+    {
+      "title": "Air Force Museum of New Zealand",
+      "paragraph": "Free admission for New Zealanders and people living in New Zealnd. $15 admission charge for international visitors | Discover New Zealand’s military aviation story at the place where it all began. Engage with stories of the men and women who have helped shape New Zealand’s military aviation journey, and reflect on their service and sacrifice through years of war and peace. Explore the diverse collection at your own pace through immersive exhibitions, or join a free, guided ‘Behind the Scenes’ tour. View the historic aircraft on display, embark on a Museum Hunt with the kids, or test your flying skills in the ‘Mosquito Mission’ flight simulator! Price: FREE admission for New Zealanders and people living in New Zealand. Some activities, including tours, may have a small charge applied. Opening Hours: Daily (except Christmas Day), 9.30am - 4.30pm.",
+      "image": "christchurch/cityplacephoto/7.jpg"
     }
   ]
 }
