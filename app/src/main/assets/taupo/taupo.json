@@ -1,12 +1,34 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Huka Falls Tracks",
+      "paragraph": "",
+      "image": "taupo/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Lake Taupo",
+      "paragraph": "",
+      "image": "taupo/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Craters of the Moon",
+      "paragraph": "Craters of the Moon is a geothermal area, a short drive north of Taupo township, NZ, where you can view the colourful craters and steam vents.",
+      "image": "taupo/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Lava Glass",
+      "paragraph": "Lava Glass is an art glass gallery, glassblowing studio & glass sculpture garden by world-renowned master glassblower Lynden Over. It is the first net carbon-zero glass studio in the world. The complex offers a unique and fascinating window into the world of glassblowing. You can watch the glass artists at work, buy a unique piece of New Zealand glass art and stroll through a garden with more than 600 glass sculptures.",
+      "image": "taupo/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "Waipahihi Botanical Gardens",
+      "paragraph": "",
+      "image": "taupo/cityplacephoto/5.jpg"
+    },
+    {
+      "title": "Maori Rock Carvings",
+      "paragraph": "",
+      "image": "taupo/cityplacephoto/6.jpg"
     }
   ]
 }
