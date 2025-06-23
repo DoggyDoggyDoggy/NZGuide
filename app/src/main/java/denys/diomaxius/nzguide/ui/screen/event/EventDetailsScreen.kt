@@ -1,4 +1,4 @@
-package denys.diomaxius.nzevents.ui.screen.event
+package denys.diomaxius.nzguide.ui.screen.event
 
 import android.content.Context
 import android.content.Intent
@@ -43,6 +43,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import denys.diomaxius.nzguide.domain.model.events.Event
 import androidx.core.net.toUri
+import denys.diomaxius.nzevents.ui.screen.event.EventDetailsScreenViewModel
 
 @Composable
 fun EventDetailsScreen(

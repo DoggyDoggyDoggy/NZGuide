@@ -7,7 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import denys.diomaxius.nzevents.ui.screen.event.EventDetailsScreen
+import denys.diomaxius.nzguide.ui.screen.event.EventDetailsScreen
 import denys.diomaxius.nzguide.ui.screen.city.CityScreen
 import denys.diomaxius.nzguide.ui.screen.home.HomeScreen
 
