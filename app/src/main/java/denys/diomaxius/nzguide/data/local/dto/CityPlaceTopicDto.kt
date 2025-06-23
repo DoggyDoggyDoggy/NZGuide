@@ -5,7 +5,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class CityPlaceTopicDto(
     val title: String,
-    val paragraph: String
+    val paragraph: String,
+    val image: String = ""
 )
 
 @Serializable

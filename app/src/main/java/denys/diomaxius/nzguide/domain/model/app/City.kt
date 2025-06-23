@@ -9,5 +9,6 @@ data class City(
 
 data class CityPlaceTopic(
     val title: String,
-    val paragraph: String
+    val paragraph: String,
+    val image: String
 )

@@ -5,5 +5,5 @@ import denys.diomaxius.nzguide.domain.model.app.CityPlaceTopic
 
 fun CityPlacesDto.toDomain(): List<CityPlaceTopic> =
     cityPlacesTopics.map {
-        CityPlaceTopic(it.title, it.paragraph)
+        CityPlaceTopic(it.title, it.paragraph, it.image)
     }
