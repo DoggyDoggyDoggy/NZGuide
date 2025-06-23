@@ -1,12 +1,34 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Kiwi Park",
+      "paragraph": "Embark on an extraordinary journey through the magnificent Kiwi Park, a 5-acre oasis in the bustling heart of Queenstown. A family-owned and operated wildlife centre in the heart of Queenstown, dedicated to saving our endangered wildlife species. We have over 20 species of native wildlife, including New Zealand’s national icon, the Kiwi and our living fossil, the Tuatara.",
+      "image": "queenstown/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Queenstown Gardens",
+      "paragraph": "Scenic park with tranquil lake views and diverse activities including an ice rink, playground, and frisbee golf. Features gardens, sculptures, and a serene pond area for leisurely strolls.",
+      "image": "queenstown/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Lake Wakatipu",
+      "paragraph": "",
+      "image": "queenstown/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Ben Lomond Track",
+      "paragraph": "Rugged 15km trail through breathtaking scenery, demanding a moderate to high fitness level. Well-marked paths lead to summit views and photo opportunities; hiking boots advised for steep climbs.",
+      "image": "queenstown/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "Queenstown Hill",
+      "paragraph": "Challenging uphill trail featuring historical markers and panoramic vistas, highlighted by the \"Basket of Dreams\" sculpture. Close to the neighborhood with a steep but manageable climb.",
+      "image": "queenstown/cityplacephoto/5.jpg"
+    },
+    {
+      "title": "The Remarkables Ski Area",
+      "paragraph": "Find your freedom at The Remarkables! Whether you’re young or young at heart, enjoy sun-soaked wide-open runs, world-renowned chutes, and jaw-dropping views. From epic beginner areas where grandparents can cheer you on from the café to easily accessible green runs, intermediate trails, adventurous black diamond chutes, and backcountry terrain, there’s something for every adventurer. ",
+      "image": "queenstown/cityplacephoto/6.jpg"
     }
   ]
 }
