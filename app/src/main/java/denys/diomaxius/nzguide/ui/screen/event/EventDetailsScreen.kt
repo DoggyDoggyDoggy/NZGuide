@@ -7,6 +7,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -50,6 +51,34 @@ fun EventDetailsScreen(
     val event by viewModel.event.collectAsState()
     val context: Context = LocalContext.current
 
+    if (event.id != "") {
+        Content(
+            event,
+            context
+        )
+    } else {
+        ErrorLoadEvent()
+    }
+}
+
+@Composable
+fun ErrorLoadEvent() {
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = "Cannot load current event",
+            fontSize = 24.sp
+        )
+    }
+}
+
+@Composable
+fun Content(
+    event: Event,
+    context: Context
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()

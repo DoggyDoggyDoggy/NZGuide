@@ -1,5 +1,6 @@
 package denys.diomaxius.nzguide.data.repository
 
+import android.util.Log
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
@@ -18,7 +19,13 @@ class EventsRepositoryImpl @Inject constructor(
 
     override suspend fun getEvent(id: String): Event {
         val response = api.getEvent(id)
-        return response.events.first().toDomain()
+        try {
+            return response.events.first().toDomain()
+        } catch(e: Exception) {
+            Log.i("EventsRepositoryImpl", "getEvent: $e")
+            return Event.empty()
+        }
+
     }
 
     override fun getEventsPager(
