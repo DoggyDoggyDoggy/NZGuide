@@ -1,12 +1,34 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Mount Maunganui Summit Track",
+      "paragraph": "Mountain trail with varied routes for different fitness levels, showcasing panoramic views and landscapes. Enjoy a challenging climb culminating in a rewarding summit spectacle.",
+      "image": "tauranga/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Waimarino Adventure Park",
+      "paragraph": "Waimarino Kayak Tours: Based in both Tauranga and Rotorua, Waimarino Kayak Tours showcases some of the best waterways in the Bay of Plenty. These include but are not limited to Lake McLaren, Lake Rotoiti, and The Wairoa River. These locations boast a large range of native birds and stunning native bush. ",
+      "image": "tauranga/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Mt Maunganui Main Beach",
+      "paragraph": "Scenic coastal stretch with clean water, ideal for surfing and family outings. Enjoy serene walks, water activities, and mountain views, along with nearby dining.",
+      "image": "tauranga/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "McLaren Falls Park",
+      "paragraph": "",
+      "image": "tauranga/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "Kaiate Falls",
+      "paragraph": "",
+      "image": "tauranga/cityplacephoto/5.jpg"
+    },
+    {
+      "title": "Adrenalin Forest",
+      "paragraph": "",
+      "image": "tauranga/cityplacephoto/6.jpg"
     }
   ]
 }
