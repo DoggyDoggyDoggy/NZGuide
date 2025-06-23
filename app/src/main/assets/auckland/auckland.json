@@ -1,12 +1,39 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Auckland Sky Tower General",
+      "paragraph": "Auckland’s 1076-foot (328-meter) Sky Tower is one of the city’s most popular attractions, especially for first-time visitors. Save money and time by pre-booking your general Sky Tower admission ticket, which allows you to visit the observation decks. Get quickly orientated and spot key landmarks such as the Harbour Bridge, Mount Eden, and Waiheke Island. Souvenir photos are available to purchase.",
+      "image": "auckland/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Auckland Museum",
+      "paragraph": "Discover and experience Maori culture, with daily cultural shows and an internationally significant Maori and Pacific collection to explore, the Auckland Museum is a must see attraction. Housed in an Iconic building within the grounds of a tranquil park, the Auckland Museum is a place to discover and learn about New Zealand's culture and its natural history. Since 1929, the Museum has served as place of remembrance for the many Aucklanders who have sacrificed their lives in war.",
+      "image": "auckland/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Mount Eden",
+      "paragraph": "Panoramic view of the dormant volcano with tranquil boardwalks, lush greenery, and Maori cultural insights. Easy hikes lead to stunning city vistas and twin craters.",
+      "image": "auckland/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Auckland Zoo",
+      "paragraph": "Interactive wildlife exhibits including a tropical dome and penguin enclosure, in a family-friendly setting with educational value and a focus on conservation.",
+      "image": "auckland/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "SEA LIFE Kelly Tarlton's Aquarium",
+      "paragraph": "SEA LIFE Kelly Tarlton’s Aquarium is New Zealand’s most famous aquarium! It is home to New Zealand's only sub-Antarctic penguins and offers a myriad of opportunities to get up close and personal with incredible marine life from the Pacific and Southern oceans. For a truly incredible experience, take the plunge on an Animal Adventure jump into the shark Cage and go snorkeling with massive sharks or jump on the ice and get up close and personal with the King and Gentoo penguins!",
+      "image": "auckland/cityplacephoto/5.jpg"
+    },
+    {
+      "title": "Cornwall Park",
+      "paragraph": "This lovely urban park offers an escape from the city hustle and bustle with oak tree-lined roads, winding paths and grazing sheep and cattle.",
+      "image": "auckland/cityplacephoto/6.jpg"
+    },
+    {
+      "title": "Bethells Beach",
+      "paragraph": "",
+      "image": "auckland/cityplacephoto/7.jpg"
     }
   ]
 }
