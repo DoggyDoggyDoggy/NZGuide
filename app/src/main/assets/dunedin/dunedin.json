@@ -1,12 +1,39 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Larnach Castle & Gardens",
+      "paragraph": "Discover New Zealand’s only Castle, built 1871 by William Larnach, merchant baron and politician, for his beloved first wife Eliza. It took more than 200 workmen three years to build the Castle shell and master European craftsmen spent a further 12 years embellishing the interior. Larnach spared no expense on his dream home, which features the finest materials from around the world.The Castle is still privately owned and cared for by the Barker family who purchased it as their home in 1967. Decades have been spent on the Castle's restoration, with the family having restored empty buildings from ruin and assembled a large collection of original New Zealand period furniture and antiques. Open to the public throughout, this conservation project has been funded through admission fees. The family has always been committed to opening their home and sharing this significant period of Dunedin and New Zealand's history.Scandalous and tragic stories, spectacular tower views and a Garden of International Significance complete this enjoyable award-winning experience. Boutique Lodge accommodation is available in the Castle gardens. Weddings, Balls, Conferences and Celebrations are held in the beautiful 3000 square foot Ballroom. High Tea is also now served daily in the Ballroom at 3pm",
+      "image": "dunedin/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "The Royal Albatross Centre",
+      "paragraph": "The only chance to see... the world's only mainland Royal Albatross Breeding Colony. A unique experience to access the nature reserve to see giant albatross court, mate, raise their chicks and show off their three metre wingspans. Taiaroa Head/Pukekura is alive with wildlife species, many of them scarce nesting seabirds. Our jewel in the crown is the Northern Royal Albatross. Experience it for yourself by taking a guided tour through the Nature Reserve into the viewing Observatory. The 2012 latest Lonely Planet publication \"1000 Ultimate Sights\" features the Royal Albatross Centre alongside the Taj Mahal and Grand Canyon. They say of us: Here at one of New Zealand's hottest attractions the draw card is the bird life. Taiaroa Head is the site of the world's only mainland royal albatross breeding ground, where you can observe the spectacle of the albatrosses with wingspans of up to 3m coming in to land like a succession of 747s. The Royal Albatross Centre is located on the tip of the Otago Peninsula, about a 45 minute drive from Dunedin.",
+      "image": "dunedin/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Toitū Otago Settlers Museum",
+      "paragraph": "Toitū Otago Settlers Museum is a museum of social history dedicated to telling the story of the people of Dunedin and the surrounding area, whose character, culture, technology, art, fashion and transport shaped New Zealand’s first great city. Its fourteen themed galleries feature interactive displays and powerful narratives tracing the human history of the area, from the earliest settlers to the most recent arrivals.Captivating exhibitions are complemented by an on site shop and café. A well-equipped research centre and archive is available for those interested in genealogy and other aspects of local history.",
+      "image": "dunedin/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Otago Peninsula",
+      "paragraph": "The Otago Peninsula is a long, hilly indented finger of land that forms the easternmost part of Dunedin, New Zealand. Volcanic in origin, it forms one wall of the eroded valley that now forms Otago Harbour. The peninsula lies south-east of Otago Harbour and runs parallel to the mainland for 20 km, with a maximum width of 9 km. It is joined to the mainland at the south-west end by a narrow isthmus about 1.5 km wide.",
+      "image": "dunedin/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "Olveston Historic Home",
+      "paragraph": "A 'must visit' for lovers of art, heritage and history, Olveston is lavishly furnished with exotic artefacts, prized artworks, antique furniture, ceramics and statues from around the world. The 35-room Edwardian mansion was designed for a one of Dunedin's most prominent businessmen, philanthropists and collectors during the early 1900s. The house was gifted to the people of Dunedin in 1966, fully furnished with the original contents, Olveston is a time capsule as little has changed inside the house since it was occupied as a family home. The house and its 'Garden of National Significance', within the city's Green Belt, can be experienced at 42 Royal Terrace, within walking distance of Dunedin's Octagon.",
+      "image": "dunedin/cityplacephoto/5.jpg"
+    },
+    {
+      "title": "Tūhura Otago Museum",
+      "paragraph": "",
+      "image": "dunedin/cityplacephoto/6.jpg"
+    },
+    {
+      "title": "Dunedin Botanic Garden",
+      "paragraph": "The Dunedin Botanic Garden is New Zealand's first botanic garden and holds the status of six star Garden of International Significance. ArbNet, the global network for tree-focussed professionals, has accredited the Botanic Garden as level III.",
+      "image": "dunedin/cityplacephoto/7.jpg"
     }
   ]
 }
