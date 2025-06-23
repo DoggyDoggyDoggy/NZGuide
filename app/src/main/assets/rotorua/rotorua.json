@@ -1,12 +1,39 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Wai-O-Tapu Thermal Wonderland",
+      "paragraph": "One of the 20 Most Surreal Places in the World\" Trip Advisor THOUSANDS OF YEARS IN THE MAKING, explore spectacular nature at New Zealand's most colourful natural volcanic area. Walk at your own pace - view the unique Champagne Pool, Sinter Terrace formations, Steaming Ground, Bubbling Mud, Expansive Vistas, Huge Volcanic Craters. The Lady Knox Geyser erupts daily at 10.15am.",
+      "image": "rotorua/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Redwoods, Whakarewarewa Forest",
+      "paragraph": "If you love the outdoors this area is for you! Escape into the beautiful Whakarewarewa Forest, one of Rotorua’s most spectacular natural assets. Famous for its magnificent stands of towering Californian Coastal Redwoods it is just five minutes drive from the city centre. Here you can experience some of the finest walking and mountain bike trails in the world. Not to mention taking in superb panoramic views of Rotorua City, Lake and surrounding district. Entry to the forest, tracks and Gift Shop & Visitor Centre is FREE. There is lots of parking and toilet facilities available.",
+      "image": "rotorua/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Te Puia",
+      "paragraph": "Te Puia spans 70 hectares within the historic Te Whakarewarewa Valley, on the edge of town. We are home to the world famous Pohutu geyser, to mud pools, hot springs, to silica formations to the Kiwi bird and the national schools of wood carving, weaving, stone and bone carving. We have shared these treasures with manuhiri (visitors) for 170 years and proudly continue that legacy today.",
+      "image": "rotorua/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Waimangu Volcanic Valley",
+      "paragraph": "Explore spectacular activity in the world’s youngest geothermal system on a self-guided walking tour at Waimangu Volcanic Valley. We offer a range of options for all abilities and ambitions varying in length from our short 1.5km highlights walk to a 4.5km hike including an invigorating climb over Mount Haszard for astonishing panoramic views. Discover Frying Pan Lake, one of the largest hot water springs in the World and mysterious, beautiful Inferno Crater Lake which rises and falls as it heats and cools.",
+      "image": "rotorua/cityplacephoto/5.jpg"
+    },
+    {
+      "title": "Whakarewarewa - The Living Maori Village",
+      "paragraph": "With natural geothermal heat radiating from the ground, Whakarewarewa Living Māori Village is a unique cultural experience, set in a fascinating geothermal landscape, offering an authentic peek into Māori village life. Hourly guided tours give visitors a chance to learn how the geothermal resources are used in daily life, twice-daily cultural performances are filled with fun interactivity, and a network of nature trails traverse geothermal lakes, bubbling mud and explosive geysers. This will be a memorable experience for all ages. Open 8.30am – 5.00pm daily.",
+      "image": "rotorua/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "Waikite Valley Hot Pools",
+      "paragraph": "Waikite Valley Hotpools are Rotorua's favourite hotpools! The pools provide the opportunity to relax and experience the pure natural geothermal waters from the Te Manaroa Spring. Facilities include The Snack Cafe, a splash pool with adjoining toddlers play area, passive bathing pools, private spas, nature trail and separate changing, toilet and shower area for families. Waikite Valley Hotpools also offers powered and non powered campground sites.",
+      "image": "rotorua/cityplacephoto/6.jpg"
+    },
+    {
+      "title": "Kuirau Park",
+      "paragraph": "Geothermal park with thermal pools and foot baths, showcasing bubbling mud pools and steaming vents amidst a well-maintained landscape. Enjoy a relaxing dip amidst natural wonders.",
+      "image": "rotorua/cityplacephoto/7.jpg"
     }
   ]
 }
