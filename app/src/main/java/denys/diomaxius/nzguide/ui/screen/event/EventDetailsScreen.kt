@@ -52,13 +52,13 @@ fun EventDetailsScreen(
     val event by viewModel.event.collectAsState()
     val context: Context = LocalContext.current
 
-    if (event.id != "") {
-        Content(
-            event,
-            context
-        )
-    } else {
+    if(event.id == "API Error") {
         ErrorLoadEvent()
+    } else if (event.id != "") {
+        Content(
+            event = event,
+            context = context
+        )
     }
 }
 

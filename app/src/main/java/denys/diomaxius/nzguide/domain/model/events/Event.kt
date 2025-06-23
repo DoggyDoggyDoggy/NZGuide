@@ -12,8 +12,8 @@ data class Event(
     val images: ImageWrapper
 ) {
     companion object {
-        fun empty() = Event(
-            id = "",
+        fun empty(id: String = "") = Event(
+            id = id,
             url = "",
             name = "",
             description = "",

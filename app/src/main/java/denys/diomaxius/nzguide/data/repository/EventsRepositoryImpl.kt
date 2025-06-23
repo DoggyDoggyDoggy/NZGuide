@@ -23,7 +23,7 @@ class EventsRepositoryImpl @Inject constructor(
             return response.events.first().toDomain()
         } catch(e: Exception) {
             Log.i("EventsRepositoryImpl", "getEvent: $e")
-            return Event.empty()
+            return Event.empty(id = "API Error")
         }
 
     }
