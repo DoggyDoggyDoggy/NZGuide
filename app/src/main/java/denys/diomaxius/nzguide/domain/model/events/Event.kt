@@ -10,4 +10,38 @@ data class Event(
     val address: String,
     val sessions: SessionsWrapper,
     val images: ImageWrapper
-)
+) {
+    companion object {
+        fun empty() = Event(
+            id = "",
+            url = "",
+            name = "",
+            description = "",
+            datetimeStart = "",
+            datetimeEnd = "",
+            address = "",
+            sessions = SessionsWrapper(
+                sessions = emptyList()
+            ),
+            images = ImageWrapper(
+                images = listOf(
+                    Image(
+                        id = 0,
+                        isPrimary = false,
+                        originalUrl = "",
+                        transforms = TransformWrapper(
+                            transforms = listOf(
+                                ImageTransform(
+                                    transformationId = 0,
+                                    url = "",
+                                    width = 0,
+                                    height = 0
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    }
+}

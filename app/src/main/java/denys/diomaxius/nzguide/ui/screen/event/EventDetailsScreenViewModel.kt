@@ -5,11 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import denys.diomaxius.nzguide.domain.model.events.Event
-import denys.diomaxius.nzguide.domain.model.events.Image
-import denys.diomaxius.nzguide.domain.model.events.ImageTransform
-import denys.diomaxius.nzguide.domain.model.events.ImageWrapper
-import denys.diomaxius.nzguide.domain.model.events.SessionsWrapper
-import denys.diomaxius.nzguide.domain.model.events.TransformWrapper
 import denys.diomaxius.nzguide.domain.usecase.GetEventUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -25,35 +20,7 @@ class EventDetailsScreenViewModel @Inject constructor(
 
     private val eventId: String = checkNotNull(savedStateHandle["eventId"])
 
-    private val _event = MutableStateFlow<Event>(
-        Event(
-            id = "",
-            url = "",
-            name = "",
-            description = "",
-            datetimeStart = "",
-            datetimeEnd = "",
-            address = "",
-            sessions = SessionsWrapper(
-                sessions = listOf()
-            ),
-            images = ImageWrapper(
-                images = listOf(Image(
-                    id = 0,
-                    isPrimary = false,
-                    originalUrl = "",
-                    transforms = TransformWrapper(
-                        transforms = listOf(ImageTransform(
-                            transformationId = 0,
-                            url = "",
-                            width = 0,
-                            height = 0
-                        ))
-                    )
-                ))
-            )
-        )
-    )
+    private val _event = MutableStateFlow<Event>(Event.empty())
     val event:StateFlow<Event> = _event.asStateFlow()
 
     init {
