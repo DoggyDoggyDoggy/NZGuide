@@ -1,12 +1,29 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Marine Parade",
+      "paragraph": "",
+      "image": "napier/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Church Road Winery Cellar Door",
+      "paragraph": "Winery with a relaxed ambiance, featuring a diverse wine collection and guided tastings set in scenic lavender gardens. Enjoy generous food platters in the beautiful outdoor seating area.",
+      "image": "napier/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Brookfields Vineyards",
+      "paragraph": "Winery nestled in rustic garden setting provides wine tastings amidst vineyards, serves gastropub cuisine, and showcases a family-owned charm with a history of resilience.",
+      "image": "napier/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "Mission Estate Winery",
+      "paragraph": "Historic winery set in picturesque gardens, offering wine tastings of renowned local reds and whites, complemented by a selection of delectable meals in its elegant restaurant with scenic views.",
+      "image": "napier/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "National Aquarium of New Zealand",
+      "paragraph": "Discover an exciting world above and below the water at the National Aquarium of New Zealand. Visit Penguin Cove and watch the world famous Little Penguins feed and play. See stingrays, kingfish, hapuku, snapper, kahawai and other majestic native species swimming over you in the 1.5 million litre oceanarium tunnel. Spot New Zealand’s native wildlife – the Tuatara and Kiwi. If you’d like to get up close to our Little Penguins, book a Close Encounter! You'll get to experience what goes on behind the scenes, discovering all about the day-to-day care of these character-filled birds and feed them in their enclosure.",
+      "image": "napier/cityplacephoto/5.jpg"
     }
   ]
 }
