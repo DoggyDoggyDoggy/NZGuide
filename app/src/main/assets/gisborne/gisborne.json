@@ -1,12 +1,19 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Tairawhiti Museum",
+      "paragraph": "Tairawhiti Museum and Art Gallery has a reputation as one of the most innovative regional museums in New Zealand. Our vision is to be an integral part of the Tairawhiti community and to stimulate passion for the stories of our region. Entry is free for local residents and $5 for visitors.",
+      "image": "gisborne/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Kaiti Hill",
+      "paragraph": "",
+      "image": "gisborne/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Mahia Peninsula",
+      "paragraph": "",
+      "image": "gisborne/cityplacephoto/3.jpg"
     }
   ]
 }
