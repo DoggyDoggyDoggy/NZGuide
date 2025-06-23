@@ -1,12 +1,34 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Bill Richardson Transport World",
+      "paragraph": "One man’s passion started it all. Experience a family legacy that has become the largest private automotive museum of its type in the world. Stunningly crafted within a world-class facility, Bill … ",
+      "image": "invercargill/cityplacephoto/1.jpg"
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Queens Park",
+      "paragraph": "Lush green space with vibrant gardens, serene lake, and an array of attractions including a mini zoo, aviary, and historic bandstand. Ideal for leisurely walks and family outings.",
+      "image": "invercargill/cityplacephoto/3.jpg"
+    },
+    {
+      "title": "E Hayes and Sons - The World's Fastest Indian",
+      "paragraph": "Historical hardware store displaying an array of classic motorcycles and Burt Munro memorabilia, complemented by a cosy coffee shop and unique motorcycling souvenirs.",
+      "image": "invercargill/cityplacephoto/2.jpg"
+    },
+    {
+      "title": "Southern Scenic Route",
+      "paragraph": "",
+      "image": "invercargill/cityplacephoto/4.jpg"
+    },
+    {
+      "title": "Demolition World",
+      "paragraph": "",
+      "image": "invercargill/cityplacephoto/5.jpg"
+    },
+    {
+      "title": "Classic Motorcycle Mecca",
+      "paragraph": "Regularly described as ‘stunning’ and ‘mind-blowing’ in scale, Classic Motorcycle Mecca is the Southern Hemisphere’s leading motorcycle museum. Offering New Zealand’s most diverse collection, guests… ",
+      "image": "invercargill/cityplacephoto/6.jpg"
     }
   ]
 }
