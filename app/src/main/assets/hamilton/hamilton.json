@@ -1,12 +1,40 @@
 {
   "cityPlacesTopics": [
     {
-      "title": "SkyCity Hamilton",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Hamilton Gardens ",
+      "paragraph": "Hamilton Gardens is a world tour of garden design with each individual garden in the 25-plus collection telling its own story and offering insights into different civilisations ranging from Indian, Japanese, Chinese and Egyptian, to Italian, English and Māori.\n\nLocated in Hamilton City along a stretch of the mighty Waikato River, the gardens include paradise, fantasy, landscape, cultivar, and productive collections.\n\nThe newest, the Ancient Egyptian Garden, takes visitors back 4,000 years to when the pharaohs ruled. Believed to be the first time such an age-old garden has been recreated, it features flowers, vegetables and fruit often used for sacred rituals, along with temples and pergolas."
     },
     {
-      "title": "Title",
-      "paragraph": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+      "title": "Waikato Museum",
+      "paragraph": "With a collection of more than 30,000 taonga (treasures), Waikato Museum – Te Whare Taonga on Waikato – overlooks the Waikato River as it threads its way through Hamilton City.\n\nHighlights include the majestic war waka (canoe) Te Winika on display, the 13 different galleries where a rich blend of artifacts and artworks are exhibited and the fun science galleries for children.\n\nBased in the nearby heritage building that was once a post office, ArtsPost has exhibition galleries and a gift shop."
+    },
+    {
+      "title": "Classic Car Museum",
+      "paragraph": "Hamilton’s Classic Car Museum is for passionate petrolheads as well as anyone with a passing interest in the history of motor cars or motor bikes – or simply motoring memorabilia.\n\nMore than 100 cars, some dating back to the early 1900s, are displayed – check out the 1906 Alldays & Onions four-seater tourer (named after the two men who designed and manufactured it), or maybe the sleek speedster lines of the 1969 McLaren M6 GT are more your style.\n\nAlso popular at the museum is the replica 1950s JukeBox Diner where burgers and shakes are served, overlooked by giant posters of Elvis, Abba and Betty Boop."
+    },
+    {
+      "title": "Cafes, Restaurants & Nightlife",
+      "paragraph": "Hamilton City pleases palates with its award winning dining scene that ranges from sophisticated nationally recognised restaurants to casual eateries including burger joints.\n\nFresh, seasonal and locally produced is a password in most of the kitchens with flavoursome fare that will take your taste buds on a world tour – no passport needed – as well as showcasing intrinsically New Zealand cuisine.\n\nThe central city is also abuzz with bars, pubs and clubs where locally crafted beverages frequently feature, including microbrew beers and ciders and locally produced wine. Eclectic DJs, bands and entertainers ensure a good night out night.\n\nAfter dark entertainment in Hamilton also includes local and visiting musicians, opera, dance, theatre and festivals with first-rate venues around the city including SkyCity, Claudelands Events Centre, and Clarence Street Theatre, and more."
+    },
+    {
+      "title": "SkyCity Hamilton",
+      "paragraph": "The premier entertainment destination in Hamilton, SkyCity Hamilton is home to a world-class casino, multiple restaurants and cafes, tenpin bowling and regular live entertainment.\n\nWith eight eateries and bars to choose from, there is a meal, snack and beverage to please all tastes, including Bowl and Social where refreshments come with 10-pin bowling action."
+    },
+    {
+      "title": "Victoria on the River",
+      "paragraph": "With coffee shops nearby and just off the main street of Hamilton City, the amphitheatre-style Victoria on the River is a pleasing place to simply sit and watch the swirling Waikato River go by. Park of Hamilton’s central city transformation, Victoria on the River has a green and organic feel thanks to thousands of plants that blend with other native foliage along the riverbank.\n\nAs well as being a fine place to relax, have a picnic-style lunch and maybe read a book, the amphitheatre is also where you can catch music, street theatre and other entertainment."
+    },
+    {
+      "title": "Escape Rooms",
+      "paragraph": "There are plenty of escape rooms in Hamilton to explore – each one of them with a different theme and storyline. Amongst them are the five Confinement Escape Rooms where the options include scavenger hunts through the city, one of them a pub crawl where a scientist developing cocktail recipes stumbles upon something revolutionary. Escape HQ in Hamilton central has rooms to get out of too, as does the Lilliput Fun Zone at Hamilton’s Centre Place shopping and entertainment precinct."
+    },
+    {
+      "title": "Golf at St Andrews",
+      "paragraph": "Established in the early 1900s, Hamilton Golf Club – St Andrews is a tree-dotted parkland course alongside the Waikato River. Guest players are welcome and the club stages regular tournaments, including corporate days, and other events throughout the year."
+    },
+    {
+      "title": "Walking and cycling",
+      "paragraph": "Hamilton Lake Domain – wide open spaces ribboned with walkways makes Hamilton Lake Domain a go-to for anyone looking for a scenic location for a little fresh air. The 100ha domain is close to the central city, has an off-leash area for dogs and a range of other amenities including picnic tables and a destination playground.\n\nWaikato River Walk – the walking and cycling track along both sides of the river offers scenic views of water, parkland, picnic spots, and city life. There are access points at many of the no exit roads and streets that end at the river and at each of the six road bridges linking the western and eastern sides of the city – look out for the graceful arches of Fairfield Bridge, constructed in the 1930s.\n\nTaitua Arboretum – On the outskirts of Hamilton City, the arboretum is the legacy of farmers John and Bunny Mortimer who had a life-long passion for growing native and exotic trees and shrubs on their land. Today the arboretum is 20 ha of mature trees, lakes and woodland gardens with meandering paths, plentiful birdlife and some great views."
     }
   ]
 }
