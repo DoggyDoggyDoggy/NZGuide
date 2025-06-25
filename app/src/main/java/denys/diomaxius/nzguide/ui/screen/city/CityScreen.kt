@@ -1,5 +1,6 @@
 package denys.diomaxius.nzguide.ui.screen.city
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -25,7 +26,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import denys.diomaxius.nzguide.navigation.LocalNavController
+import denys.diomaxius.nzguide.navigation.NavScreen
 
 @Composable
 fun CityScreen(
@@ -67,21 +70,20 @@ fun CityScreen(
             modifier = Modifier.height(16.dp)
         )
 
-        /*
-        CityPlacesScreen(
-            city = city
-        )*/
-
-        Row (
+        Row(
             modifier = Modifier.fillMaxWidth()
-        ){
+        ) {
             CardTopThingsToDo(
                 modifier = Modifier.weight(1f),
-                cityName = city.cityName
+                cityName = city.cityName,
+                cityPlacesJsonPath = city.cityPlacesTopics,
+                navHostController = navHostController
             )
             CardTopThingsToDo(
                 modifier = Modifier.weight(1f),
-                cityName = city.cityName
+                cityName = city.cityName,
+                cityPlacesJsonPath = city.cityPlacesTopics,
+                navHostController = navHostController
             )
         }
     }
@@ -90,10 +92,23 @@ fun CityScreen(
 @Composable
 fun CardTopThingsToDo(
     modifier: Modifier = Modifier,
-    cityName: String) {
+    cityName: String,
+    navHostController: NavHostController,
+    cityPlacesJsonPath: String
+) {
     Card(
         modifier = modifier
-            .padding(12.dp),
+            .padding(12.dp)
+            .clickable {
+                navHostController.navigate(
+                    NavScreen.CityPlaces.createRoute(
+                        cityPlacesJsonPath = cityPlacesJsonPath,
+                        cityName = cityName
+                    )
+                ) {
+                    launchSingleTop = true
+                }
+            },
         elevation = CardDefaults.cardElevation(5.dp)
     ) {
         Text(
@@ -107,15 +122,3 @@ fun CardTopThingsToDo(
         )
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

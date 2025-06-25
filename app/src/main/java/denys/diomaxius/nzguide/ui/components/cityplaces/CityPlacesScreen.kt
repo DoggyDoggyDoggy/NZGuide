@@ -15,7 +15,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import denys.diomaxius.nzguide.domain.model.app.City
 import denys.diomaxius.nzguide.domain.model.app.CityPlaceTopic
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -28,19 +27,19 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun CityPlacesScreen(
-    city: City,
+    cityName: String,
     viewModel: CityPlacesScreenViewModel = hiltViewModel()
 ) {
     val cityPlacesTopics by viewModel.cityPlaces.collectAsState()
 
     LaunchedEffect(Unit) {
-        viewModel.getCityPlaces(city.cityPlacesTopics)
+        viewModel.getCityPlaces()
     }
 
     Column {
         Text(
             modifier = Modifier.fillMaxWidth(),
-            text = "Top Things to Do in ${city.cityName} City",
+            text = "Top Things to Do in $cityName City",
             fontWeight = FontWeight.Bold,
             fontSize = 32.sp,
             textAlign = TextAlign.Center
