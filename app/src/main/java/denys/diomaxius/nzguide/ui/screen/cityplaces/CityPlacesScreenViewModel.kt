@@ -1,5 +1,6 @@
 package denys.diomaxius.nzguide.ui.screen.cityplaces
 
+import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -21,6 +22,6 @@ class CityPlacesScreenViewModel @Inject constructor(
 
     fun getCityPlaces(cityPlaces: String = cityPlacesJsonPath) {
         _cityPlaces.value = getCityPlacesUseCase(cityPlaces)
+        Log.i("CityPlacesScreenViewModel", _cityPlaces.value.toString())
     }
-
 }

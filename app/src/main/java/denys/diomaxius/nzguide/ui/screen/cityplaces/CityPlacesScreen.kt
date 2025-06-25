@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -36,7 +38,12 @@ fun CityPlacesScreen(
         viewModel.getCityPlaces()
     }
 
-    Column {
+    Column (
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(12.dp)
+            .verticalScroll(rememberScrollState())
+    ) {
         Text(
             modifier = Modifier.fillMaxWidth(),
             text = "Top Things to Do in $cityName City",
@@ -52,16 +59,17 @@ fun CityPlacesScreen(
 
 @Composable
 fun CityPlace(topic: CityPlaceTopic) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(12.dp)
-    ) {
+    Column {
+        Spacer(
+            modifier = Modifier.height(25.dp)
+        )
+
         Text(
             text = topic.title,
             fontWeight = FontWeight.Bold,
             fontSize = 24.sp
         )
+
         Spacer(
             modifier = Modifier.height(5.dp)
         )
