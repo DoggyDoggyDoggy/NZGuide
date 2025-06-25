@@ -1,4 +1,4 @@
-package denys.diomaxius.nzguide.ui.components.cityplaces
+package denys.diomaxius.nzguide.ui.screen.cityplaces
 
 import android.graphics.BitmapFactory
 import androidx.compose.foundation.Image

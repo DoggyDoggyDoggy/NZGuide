@@ -12,7 +12,7 @@ import androidx.navigation.navArgument
 import denys.diomaxius.nzguide.ui.screen.event.EventDetailsScreen
 import denys.diomaxius.nzguide.ui.screen.city.CityScreen
 import denys.diomaxius.nzguide.ui.screen.home.HomeScreen
-import denys.diomaxius.nzguide.ui.components.cityplaces.CityPlacesScreen
+import denys.diomaxius.nzguide.ui.screen.cityplaces.CityPlacesScreen
 
 val LocalNavController = compositionLocalOf<NavHostController> {
     error("NavController not initialized")
