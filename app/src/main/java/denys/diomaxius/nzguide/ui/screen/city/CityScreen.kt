@@ -135,7 +135,7 @@ fun CardTopThingsToDo(
             Text(
                 text = cardText,
                 fontWeight = FontWeight.Bold,
-                fontSize = 26.sp,
+                fontSize = 24.sp,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(8.dp)
             )
