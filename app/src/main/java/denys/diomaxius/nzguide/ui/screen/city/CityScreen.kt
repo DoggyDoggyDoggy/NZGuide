@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
@@ -71,7 +72,9 @@ fun CityScreen(
         )
 
         Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 12.dp)
         ) {
             CardTopThingsToDo(
                 modifier = Modifier.weight(1f),
@@ -79,6 +82,11 @@ fun CityScreen(
                 cityPlacesJsonPath = city.cityPlacesTopics,
                 navHostController = navHostController
             )
+
+            Spacer(
+                modifier = Modifier.width(12.dp)
+            )
+
             CardTopThingsToDo(
                 modifier = Modifier.weight(1f),
                 cityName = city.cityName,
@@ -98,7 +106,6 @@ fun CardTopThingsToDo(
 ) {
     Card(
         modifier = modifier
-            .padding(12.dp)
             .clickable {
                 navHostController.navigate(
                     NavScreen.CityPlaces.createRoute(
@@ -117,7 +124,7 @@ fun CardTopThingsToDo(
                 .padding(12.dp),
             text = "Top Things to Do in $cityName City",
             fontWeight = FontWeight.Bold,
-            fontSize = 32.sp,
+            fontSize = 26.sp,
             textAlign = TextAlign.Center
         )
     }
