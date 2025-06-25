@@ -1,12 +1,14 @@
 package denys.diomaxius.nzguide.ui.screen.city
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
@@ -24,6 +26,7 @@ import denys.diomaxius.nzguide.ui.components.cityphotoslider.CityPhotoSlider
 import denys.diomaxius.nzguide.ui.components.events.EventsRow
 import denys.diomaxius.nzguide.ui.components.weather.WeatherForecastFiveDays
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
@@ -80,7 +83,8 @@ fun CityScreen(
                 modifier = Modifier.weight(1f),
                 cityName = city.cityName,
                 cityPlacesJsonPath = city.cityPlacesTopics,
-                navHostController = navHostController
+                navHostController = navHostController,
+                cardText = "Top Things to Do in ${city.cityName} City"
             )
 
             Spacer(
@@ -91,7 +95,8 @@ fun CityScreen(
                 modifier = Modifier.weight(1f),
                 cityName = city.cityName,
                 cityPlacesJsonPath = city.cityPlacesTopics,
-                navHostController = navHostController
+                navHostController = navHostController,
+                cardText = "Add something else here"
             )
         }
     }
@@ -102,10 +107,12 @@ fun CardTopThingsToDo(
     modifier: Modifier = Modifier,
     cityName: String,
     navHostController: NavHostController,
-    cityPlacesJsonPath: String
+    cityPlacesJsonPath: String,
+    cardText: String
 ) {
     Card(
         modifier = modifier
+            .heightIn(min = 150.dp)
             .clickable {
                 navHostController.navigate(
                     NavScreen.CityPlaces.createRoute(
@@ -118,14 +125,20 @@ fun CardTopThingsToDo(
             },
         elevation = CardDefaults.cardElevation(5.dp)
     ) {
-        Text(
+        Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(12.dp),
-            text = "Top Things to Do in $cityName City",
-            fontWeight = FontWeight.Bold,
-            fontSize = 26.sp,
-            textAlign = TextAlign.Center
-        )
+                .heightIn(min = 150.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = cardText,
+                fontWeight = FontWeight.Bold,
+                fontSize = 26.sp,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(8.dp)
+            )
+        }
     }
 }
