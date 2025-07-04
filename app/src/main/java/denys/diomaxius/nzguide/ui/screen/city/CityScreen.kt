@@ -24,6 +24,7 @@ import androidx.compose.runtime.getValue
 import androidx.navigation.NavHostController
 import denys.diomaxius.nzguide.domain.model.app.City
 import denys.diomaxius.nzguide.navigation.LocalNavController
+import denys.diomaxius.nzguide.navigation.NavScreen
 
 @Composable
 fun CityScreen(
@@ -85,24 +86,33 @@ fun Content(
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp)
         ) {
-            CardTopThingsToDo(
+            InfoCard(
                 modifier = Modifier.weight(1f),
-                cityName = city.cityName,
-                cityPlacesJsonPath = city.cityPlacesTopics,
-                navHostController = navHostController,
-                cardText = "Top Things to Do in ${city.cityName} City"
+                cardText = "Top Things to Do in ${city.cityName} City",
+                onClick = {
+                    navHostController.navigate(
+                        NavScreen.CityPlaces.createRoute(
+                            cityPlacesJsonPath = city.cityPlacesTopics,
+                            cityName = city.cityName
+                        )
+                    ) {
+                        launchSingleTop = true
+                    }
+                }
             )
 
             Spacer(
                 modifier = Modifier.width(12.dp)
             )
 
-            CardTopThingsToDo(
+            InfoCard(
                 modifier = Modifier.weight(1f),
-                cityName = city.cityName,
-                cityPlacesJsonPath = city.cityPlacesTopics,
-                navHostController = navHostController,
-                cardText = "Add something else here"
+                cardText = "City History",
+                onClick = {
+                    navHostController.navigate(NavScreen.CityHistory.route) {
+                        launchSingleTop = true
+                    }
+                }
             )
         }
     }

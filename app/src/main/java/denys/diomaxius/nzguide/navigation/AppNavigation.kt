@@ -11,6 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import denys.diomaxius.nzguide.ui.screen.event.EventDetailsScreen
 import denys.diomaxius.nzguide.ui.screen.city.CityScreen
+import denys.diomaxius.nzguide.ui.screen.cityhistory.CityHistoryScreen
 import denys.diomaxius.nzguide.ui.screen.home.HomeScreen
 import denys.diomaxius.nzguide.ui.screen.cityplaces.CityPlacesScreen
 
@@ -54,6 +55,10 @@ fun AppNavigation(
                     ?.getString("cityName")
                     .orEmpty()
                 CityPlacesScreen(cityName = cityName)
+            }
+
+            composable(NavScreen.CityHistory.route) {
+                CityHistoryScreen()
             }
         }
     }

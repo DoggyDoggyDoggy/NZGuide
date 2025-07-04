@@ -16,4 +16,6 @@ sealed class NavScreen(val route: String) {
         fun createRoute(cityPlacesJsonPath: String, cityName: String): String =
             "cityplaces?jsonPath=$cityPlacesJsonPath&cityName=$cityName"
     }
+
+    object CityHistory : NavScreen("cityhistory")
 }

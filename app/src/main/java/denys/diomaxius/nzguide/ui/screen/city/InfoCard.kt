@@ -16,29 +16,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
-import denys.diomaxius.nzguide.navigation.NavScreen
 
 @Composable
-fun CardTopThingsToDo(
+fun InfoCard(
     modifier: Modifier = Modifier,
-    cityName: String,
-    navHostController: NavHostController,
-    cityPlacesJsonPath: String,
-    cardText: String
+    cardText: String,
+    onClick: () -> Unit
 ) {
     Card(
         modifier = modifier
             .heightIn(min = 150.dp)
             .clickable {
-                navHostController.navigate(
-                    NavScreen.CityPlaces.createRoute(
-                        cityPlacesJsonPath = cityPlacesJsonPath,
-                        cityName = cityName
-                    )
-                ) {
-                    launchSingleTop = true
-                }
+                onClick()
             },
         elevation = CardDefaults.cardElevation(5.dp)
     ) {
