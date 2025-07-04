@@ -26,6 +26,7 @@ import denys.diomaxius.nzguide.domain.model.app.City
 import denys.diomaxius.nzguide.navigation.LocalNavController
 import denys.diomaxius.nzguide.navigation.NavScreen
 import denys.diomaxius.nzguide.ui.components.TextOverlay
+import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
 fun HomeScreen(
@@ -34,7 +35,11 @@ fun HomeScreen(
     val cities by viewModel.cities.collectAsState()
     val navHostController = LocalNavController.current
 
-    Scaffold { innerPadding ->
+    Scaffold (
+      topBar = {
+          TopBar()
+      }
+    ) { innerPadding ->
         Content(
             modifier = Modifier.padding(innerPadding),
             navHostController = navHostController,
