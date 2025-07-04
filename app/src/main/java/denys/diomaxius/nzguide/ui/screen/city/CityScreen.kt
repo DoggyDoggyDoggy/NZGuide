@@ -33,17 +33,13 @@ fun CityScreen(
     val city by viewModel.city.collectAsState()
     val navHostController = LocalNavController.current
 
-    Scaffold(
-
-    ) { innerPadding ->
+    Scaffold { innerPadding ->
         Content(
             modifier = modifier.padding(innerPadding),
             city = city,
             navHostController = navHostController
         )
     }
-
-
 }
 
 @Composable
