@@ -12,3 +12,7 @@ data class CityPlaceTopic(
     val paragraph: String,
     val image: String
 )
+
+data class CityHistory(
+    val paragraphs: List<String>
+)
