@@ -4,7 +4,8 @@ data class City(
     val id: Int,
     val cityName: String,
     val photo: List<String>,
-    val cityPlacesTopics: String
+    val cityPlacesTopics: String,
+    var cityHistory: String = "" //Change later to val
 )
 
 data class CityPlaceTopic(

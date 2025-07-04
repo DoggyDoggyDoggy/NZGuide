@@ -18,7 +18,7 @@ class CityRepositoryImpl @Inject constructor(
         City(126, "Dunedin", listOf("dunedin/1.jpg", "dunedin/2.jpg", "dunedin/3.jpg"), "dunedin/dunedin.json"),
         City(137, "Invercargill", listOf("invercargill/1.jpg", "invercargill/2.jpg", "invercargill/3.jpg"), "invercargill/invercargill.json"),
         City(130, "Queenstown", listOf("queenstown/1.jpg", "queenstown/2.jpg", "queenstown/3.jpg"), "queenstown/queenstown.json"),
-        City(2, "Auckland", listOf("auckland/1.jpg", "auckland/2.jpg", "auckland/3.jpg"), "auckland/auckland.json"),
+        City(2, "Auckland", listOf("auckland/1.jpg", "auckland/2.jpg", "auckland/3.jpg"), "auckland/auckland.json", "auckland/cityhistory.json"),
         City(57, "Rotorua", listOf("rotorua/1.jpg", "rotorua/2.jpg", "rotorua/3.jpg"), "rotorua/rotorua.json"),
         City(7051, "Whangarei", listOf("whangarei/1.jpg", "whangarei/2.jpg", "whangarei/3.jpg"), "whangarei/whangarei.json"),
         City(6, "Gisborne", listOf("gisborne/1.jpg", "gisborne/2.jpg", "gisborne/3.jpg"), "gisborne/gisborne.json"),
