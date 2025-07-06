@@ -9,11 +9,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
 import androidx.navigation.NavHostController
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
 import denys.diomaxius.nzguide.ui.screen.event.EventDetailsScreen
 import denys.diomaxius.nzguide.ui.screen.city.CityScreen
 import denys.diomaxius.nzguide.ui.screen.cityhistory.CityHistoryScreen
@@ -71,38 +69,13 @@ fun AppNavigation(
                 EventDetailsScreen()
             }
 
-            composable(
-                route = NavScreen.CityPlaces.route,
-                arguments = listOf(
-                    navArgument("cityPlacesJsonPath") {
-                        type = NavType.StringType
-                    },
-                    navArgument("cityName") {
-                        type = NavType.StringType
-                    }
-                )
-            ) { backStackEntry ->
-                val cityName = backStackEntry.arguments
-                    ?.getString("cityName")
-                    .orEmpty()
-                CityPlacesScreen(cityName = cityName)
+            composable(NavScreen.CityPlaces.route,
+            ) {
+                CityPlacesScreen()
             }
 
-            composable(
-                route = NavScreen.CityHistory.route,
-                arguments = listOf(
-                    navArgument("cityHistoryJsonPath") {
-                        type = NavType.StringType
-                    },
-                    navArgument("cityName") {
-                        type = NavType.StringType
-                    }
-                )
-            ) { backStackEntry ->
-                val cityName = backStackEntry.arguments
-                    ?.getString("cityName")
-                    .orEmpty()
-                CityHistoryScreen(cityName = cityName)
+            composable(NavScreen.CityHistory.route,) {
+                CityHistoryScreen()
             }
         }
     }

@@ -10,17 +10,11 @@ sealed class NavScreen(val route: String) {
         fun createRoute(eventId: String): String = "event/$eventId"
     }
 
-    object CityPlaces : NavScreen(
-        "cityplaces?jsonPath={cityPlacesJsonPath}&cityName={cityName}"
-    ) {
-        fun createRoute(cityPlacesJsonPath: String, cityName: String): String =
-            "cityplaces?jsonPath=$cityPlacesJsonPath&cityName=$cityName"
+    object CityPlaces : NavScreen("cityplaces/{cityId}") {
+        fun createRoute(cityId: Int): String = "cityplaces/$cityId"
     }
 
-    object CityHistory : NavScreen(
-        "cityHistory?jsonPath={cityHistoryJsonPath}&cityName={cityName}"
-    ) {
-        fun createRoute(cityHistoryJsonPath: String, cityName: String): String =
-            "cityHistory?jsonPath=$cityHistoryJsonPath&cityName=$cityName"
+    object CityHistory : NavScreen("cityhistory/{cityId}") {
+        fun createRoute(cityId: Int): String = "cityhistory/$cityId"
     }
 }

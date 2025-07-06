@@ -12,7 +12,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -29,16 +28,12 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun CityPlacesScreen(
-    cityName: String,
     viewModel: CityPlacesScreenViewModel = hiltViewModel()
 ) {
     val cityPlacesTopics by viewModel.cityPlaces.collectAsState()
+    val cityName by viewModel.cityName.collectAsState()
 
-    LaunchedEffect(Unit) {
-        viewModel.getCityPlaces()
-    }
-
-    Column (
+    Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(12.dp)
@@ -46,7 +41,7 @@ fun CityPlacesScreen(
     ) {
         Text(
             modifier = Modifier.fillMaxWidth(),
-            text = "Top Things to Do in $cityName City",
+            text = "Top Things to Do in $cityName",
             fontWeight = FontWeight.Bold,
             fontSize = 32.sp,
             textAlign = TextAlign.Center

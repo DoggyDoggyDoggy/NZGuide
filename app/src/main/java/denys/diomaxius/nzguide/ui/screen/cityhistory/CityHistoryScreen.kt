@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -21,16 +20,12 @@ import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 @Composable
 fun CityHistoryScreen(
     modifier: Modifier = Modifier,
-    viewModel: CityHistoryScreenViewModel = hiltViewModel(),
-    cityName: String
+    viewModel: CityHistoryScreenViewModel = hiltViewModel()
 ) {
     val cityHistory by viewModel.cityHistory.collectAsState()
+    val cityName by viewModel.cityName.collectAsState()
 
-    LaunchedEffect(Unit) {
-        viewModel.getCityHistory()
-    }
-
-    Scaffold (
+    Scaffold(
         topBar = {
             TopBar(
                 text = "History of $cityName"

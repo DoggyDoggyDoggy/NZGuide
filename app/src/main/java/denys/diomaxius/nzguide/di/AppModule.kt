@@ -7,14 +7,13 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import denys.diomaxius.nzguide.data.local.datasource.CityAssetsSource
-import denys.diomaxius.nzguide.data.local.mapper.toDomain
+import denys.diomaxius.nzguide.data.local.dto.CityDto
 import denys.diomaxius.nzguide.data.remote.api.EventsFindApi
 import denys.diomaxius.nzguide.data.remote.api.WeatherApi
 import denys.diomaxius.nzguide.data.remote.network.RetrofitClient
 import denys.diomaxius.nzguide.data.repository.CityRepositoryImpl
 import denys.diomaxius.nzguide.data.repository.EventsRepositoryImpl
 import denys.diomaxius.nzguide.data.repository.WeatherRepositoryImpl
-import denys.diomaxius.nzguide.domain.model.app.City
 import denys.diomaxius.nzguide.domain.repository.CityRepository
 import denys.diomaxius.nzguide.domain.repository.EventsRepository
 import denys.diomaxius.nzguide.domain.repository.WeatherRepository
@@ -49,14 +48,14 @@ object AppModule {
     @Singleton
     fun provideAllCities(
         cityAssetsSource: CityAssetsSource
-    ): List<City> {
-        return cityAssetsSource.loadCitiesJson("cities.json").toDomain()
+    ): List<CityDto> {
+        return cityAssetsSource.loadCitiesJson("cities.json").cities
     }
 
     @Provides
     @Singleton
     fun provideCityRepository(
-        allCities: List<City>,
+        allCities: List<CityDto>,
         cityAssetsSource: CityAssetsSource
     ): CityRepository = CityRepositoryImpl(allCities, cityAssetsSource)
 }

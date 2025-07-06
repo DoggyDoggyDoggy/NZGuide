@@ -1,28 +1,30 @@
 package denys.diomaxius.nzguide.ui.screen.cityhistory
 
-import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import denys.diomaxius.nzguide.domain.model.app.CityHistory
-import denys.diomaxius.nzguide.domain.usecase.GetCityHistoryUseCase
+import denys.diomaxius.nzguide.domain.usecase.GetCityByIdUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
 @HiltViewModel
 class CityHistoryScreenViewModel @Inject constructor(
-    private val getCityHistoryUseCase: GetCityHistoryUseCase,
+    getCityByIdUseCase: GetCityByIdUseCase,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
-    private val cityHistoryJsonPath: String = checkNotNull(savedStateHandle["cityHistoryJsonPath"])
-
+    private val cityId: String = checkNotNull(savedStateHandle["cityId"])
 
     private val _cityHistory = MutableStateFlow<CityHistory>(CityHistory(emptyList()))
     val cityHistory = _cityHistory.asStateFlow()
 
-    fun getCityHistory(cityHistory: String = cityHistoryJsonPath) {
-        Log.i("CityHistoryScreenViewModel", cityHistoryJsonPath)
-        _cityHistory.value = getCityHistoryUseCase(cityHistory)
+    private val _cityName = MutableStateFlow("")
+    val cityName = _cityName.asStateFlow()
+
+    init {
+        val city = getCityByIdUseCase(cityId.toInt())
+        _cityName.value = city.name
+        _cityHistory.value = city.history
     }
 }
