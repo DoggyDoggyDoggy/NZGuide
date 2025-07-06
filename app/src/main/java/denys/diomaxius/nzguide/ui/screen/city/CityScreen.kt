@@ -111,7 +111,8 @@ fun Content(
                 onClick = {
                     navHostController.navigate(
                         NavScreen.CityHistory.createRoute(
-                            cityHistoryJsonPath = city.cityHistory
+                            cityHistoryJsonPath = city.cityHistory,
+                            cityName = city.cityName
                         )
                     ) {
                         launchSingleTop = true

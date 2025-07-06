@@ -16,11 +16,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import denys.diomaxius.nzguide.domain.model.app.CityHistory
+import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
 fun CityHistoryScreen(
     modifier: Modifier = Modifier,
-    viewModel: CityHistoryScreenViewModel = hiltViewModel()
+    viewModel: CityHistoryScreenViewModel = hiltViewModel(),
+    cityName: String
 ) {
     val cityHistory by viewModel.cityHistory.collectAsState()
 
@@ -28,7 +30,13 @@ fun CityHistoryScreen(
         viewModel.getCityHistory()
     }
 
-    Scaffold { innerPadding ->
+    Scaffold (
+        topBar = {
+            TopBar(
+                text = "History of $cityName"
+            )
+        }
+    ) { innerPadding ->
         Content(
             modifier = modifier.padding(innerPadding),
             cityHistory = cityHistory

@@ -76,8 +76,21 @@ fun AppNavigation(
                 CityPlacesScreen(cityName = cityName)
             }
 
-            composable(NavScreen.CityHistory.route) {
-                CityHistoryScreen()
+            composable(
+                route =NavScreen.CityHistory.route,
+                arguments = listOf(
+                    navArgument("cityHistoryJsonPath") {
+                        type = NavType.StringType
+                    },
+                    navArgument("cityName") {
+                        type = NavType.StringType
+                    }
+                )
+            ) {backStackEntry ->
+                val cityName = backStackEntry.arguments
+                    ?.getString("cityName")
+                    .orEmpty()
+                CityHistoryScreen(cityName = cityName)
             }
         }
     }
