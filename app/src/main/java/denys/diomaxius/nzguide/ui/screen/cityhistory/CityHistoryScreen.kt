@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -14,6 +15,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import denys.diomaxius.nzguide.domain.model.app.CityHistory
 
 @Composable
 fun CityHistoryScreen(
@@ -26,6 +28,19 @@ fun CityHistoryScreen(
         viewModel.getCityHistory()
     }
 
+    Scaffold { innerPadding ->
+        Content(
+            modifier = modifier.padding(innerPadding),
+            cityHistory = cityHistory
+        )
+    }
+}
+
+@Composable
+fun Content(
+    modifier: Modifier = Modifier,
+    cityHistory: CityHistory
+) {
     Column(
         modifier = modifier
             .fillMaxSize()
