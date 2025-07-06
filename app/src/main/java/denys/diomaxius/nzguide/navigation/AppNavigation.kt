@@ -40,16 +40,28 @@ fun AppNavigation(
             composable(
                 route = NavScreen.City.route,
                 enterTransition = {
-                    slideInHorizontally(initialOffsetX = { 1000 }, animationSpec = tween(500)) + fadeIn()
+                    slideInHorizontally(
+                        initialOffsetX = { 1000 },
+                        animationSpec = tween(500)
+                    ) + fadeIn()
                 },
                 exitTransition = {
-                    slideOutHorizontally(targetOffsetX = { -1000 }, animationSpec = tween(500)) + fadeOut()
+                    slideOutHorizontally(
+                        targetOffsetX = { -1000 },
+                        animationSpec = tween(500)
+                    ) + fadeOut()
                 },
                 popEnterTransition = {
-                    slideInHorizontally(initialOffsetX = { -1000 }, animationSpec = tween(500)) + fadeIn()
+                    slideInHorizontally(
+                        initialOffsetX = { -1000 },
+                        animationSpec = tween(500)
+                    ) + fadeIn()
                 },
                 popExitTransition = {
-                    slideOutHorizontally(targetOffsetX = { 1000 }, animationSpec = tween(500)) + fadeOut()
+                    slideOutHorizontally(
+                        targetOffsetX = { 1000 },
+                        animationSpec = tween(500)
+                    ) + fadeOut()
                 }
             ) {
                 CityScreen()
@@ -77,7 +89,7 @@ fun AppNavigation(
             }
 
             composable(
-                route =NavScreen.CityHistory.route,
+                route = NavScreen.CityHistory.route,
                 arguments = listOf(
                     navArgument("cityHistoryJsonPath") {
                         type = NavType.StringType
@@ -86,7 +98,7 @@ fun AppNavigation(
                         type = NavType.StringType
                     }
                 )
-            ) {backStackEntry ->
+            ) { backStackEntry ->
                 val cityName = backStackEntry.arguments
                     ?.getString("cityName")
                     .orEmpty()
