@@ -1,12 +1,8 @@
 package denys.diomaxius.nzguide.data.local.mapper
 
-import denys.diomaxius.nzguide.data.local.dto.CityDto
+import denys.diomaxius.nzguide.data.local.dto.CitiesDto
 import denys.diomaxius.nzguide.domain.model.app.City
 
-fun CityDto.toDomain(): City = City(
-    id = id,
-    cityName = cityName,
-    photo = photo,
-    cityPlacesTopics = cityPlacesTopics,
-    cityHistory = cityHistory
-)
+fun CitiesDto.toDomain(): List<City> = cities.map {
+    City(it.id, it.cityName, it.photo, it.cityPlacesTopics, it.cityHistory)
+}

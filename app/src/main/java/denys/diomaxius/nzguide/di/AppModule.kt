@@ -50,7 +50,7 @@ object AppModule {
     fun provideAllCities(
         cityAssetsSource: CityAssetsSource
     ): List<City> {
-        return cityAssetsSource.loadCitiesJson("cities.json").map { it.toDomain() }
+        return cityAssetsSource.loadCitiesJson("cities.json").toDomain()
     }
 
     @Provides

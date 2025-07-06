@@ -1,167 +1,169 @@
-[
-  {
-    "id": 42,
-    "cityName": "Hamilton",
-    "photo": [
-      "hamilton/1.jpg",
-      "hamilton/2.jpg",
-      "hamilton/3.jpg"
-    ],
-    "cityPlacesTopics": "hamilton/hamilton.json",
-    "cityHistory": "hamilton/cityhistory.json"
-  },
-  {
-    "id": 363,
-    "cityName": "Wellington",
-    "photo": [
-      "wellington/1.jpg",
-      "wellington/2.jpg",
-      "wellington/3.jpg"
-    ],
-    "cityPlacesTopics": "wellington/wellington.json",
-    "cityHistory": "wellington/cityhistory.json"
-  },
-  {
-    "id": 110,
-    "cityName": "Christchurch",
-    "photo": [
-      "christchurch/1.jpg",
-      "christchurch/2.jpg",
-      "christchurch/3.jpg"
-    ],
-    "cityPlacesTopics": "christchurch/christchurch.json",
-    "cityHistory": "christchurch/cityhistory.json"
-  },
-  {
-    "id": 126,
-    "cityName": "Dunedin",
-    "photo": [
-      "dunedin/1.jpg",
-      "dunedin/2.jpg",
-      "dunedin/3.jpg"
-    ],
-    "cityPlacesTopics": "dunedin/dunedin.json",
-    "cityHistory": "dunedin/cityhistory.json"
-  },
-  {
-    "id": 137,
-    "cityName": "Invercargill",
-    "photo": [
-      "invercargill/1.jpg",
-      "invercargill/2.jpg",
-      "invercargill/3.jpg"
-    ],
-    "cityPlacesTopics": "invercargill/invercargill.json",
-    "cityHistory": "invercargill/cityhistory.json"
-  },
-  {
-    "id": 130,
-    "cityName": "Queenstown",
-    "photo": [
-      "queenstown/1.jpg",
-      "queenstown/2.jpg",
-      "queenstown/3.jpg"
-    ],
-    "cityPlacesTopics": "queenstown/queenstown.json",
-    "cityHistory": "queenstown/cityhistory.json"
-  },
-  {
-    "id": 2,
-    "cityName": "Auckland",
-    "photo": [
-      "auckland/1.jpg",
-      "auckland/2.jpg",
-      "auckland/3.jpg"
-    ],
-    "cityPlacesTopics": "auckland/auckland.json",
-    "cityHistory": "auckland/cityhistory.json"
-  },
-  {
-    "id": 57,
-    "cityName": "Rotorua",
-    "photo": [
-      "rotorua/1.jpg",
-      "rotorua/2.jpg",
-      "rotorua/3.jpg"
-    ],
-    "cityPlacesTopics": "rotorua/rotorua.json",
-    "cityHistory": "rotorua/cityhistory.json"
-  },
-  {
-    "id": 7051,
-    "cityName": "Whangarei",
-    "photo": [
-      "whangarei/1.jpg",
-      "whangarei/2.jpg",
-      "whangarei/3.jpg"
-    ],
-    "cityPlacesTopics": "whangarei/whangarei.json",
-    "cityHistory": "whangarei/cityhistory.json"
-  },
-  {
-    "id": 6,
-    "cityName": "Gisborne",
-    "photo": [
-      "gisborne/1.jpg",
-      "gisborne/2.jpg",
-      "gisborne/3.jpg"
-    ],
-    "cityPlacesTopics": "gisborne/gisborne.json",
-    "cityHistory": "gisborne/cityhistory.json"
-  },
-  {
-    "id": 83,
-    "cityName": "Palmerston North",
-    "photo": [
-      "palmerstonnorth/1.jpg",
-      "palmerstonnorth/2.jpg",
-      "palmerstonnorth/3.jpg"
-    ],
-    "cityPlacesTopics": "palmerstonnorth/palmerstonnorth.json",
-    "cityHistory": "palmerstonnorth/cityhistory.json"
-  },
-  {
-    "id": 67,
-    "cityName": "Napier",
-    "photo": [
-      "napier/1.jpg",
-      "napier/2.jpg",
-      "napier/3.jpg"
-    ],
-    "cityPlacesTopics": "napier/napier.json",
-    "cityHistory": "napier/cityhistory.json"
-  },
-  {
-    "id": 58,
-    "cityName": "Taupo",
-    "photo": [
-      "taupo/1.jpg",
-      "taupo/2.jpg",
-      "taupo/3.jpg"
-    ],
-    "cityPlacesTopics": "taupo/taupo.json",
-    "cityHistory": "taupo/cityhistory.json"
-  },
-  {
-    "id": 59,
-    "cityName": "Tauranga",
-    "photo": [
-      "tauranga/1.jpg",
-      "tauranga/2.jpg",
-      "tauranga/3.jpg"
-    ],
-    "cityPlacesTopics": "tauranga/tauranga.json",
-    "cityHistory": "tauranga/cityhistory.json"
-  },
-  {
-    "id": 72,
-    "cityName": "New Plymouth",
-    "photo": [
-      "newplymouth/1.jpg",
-      "newplymouth/2.jpg",
-      "newplymouth/3.jpg"
-    ],
-    "cityPlacesTopics": "newplymouth/newplymouth.json",
-    "cityHistory": "newplymouth/cityhistory.json"
-  }
-]
+{
+  "cities": [
+    {
+      "id": 42,
+      "cityName": "Hamilton",
+      "photo": [
+        "hamilton/1.jpg",
+        "hamilton/2.jpg",
+        "hamilton/3.jpg"
+      ],
+      "cityPlacesTopics": "hamilton/hamilton.json",
+      "cityHistory": "hamilton/cityhistory.json"
+    },
+    {
+      "id": 363,
+      "cityName": "Wellington",
+      "photo": [
+        "wellington/1.jpg",
+        "wellington/2.jpg",
+        "wellington/3.jpg"
+      ],
+      "cityPlacesTopics": "wellington/wellington.json",
+      "cityHistory": "wellington/cityhistory.json"
+    },
+    {
+      "id": 110,
+      "cityName": "Christchurch",
+      "photo": [
+        "christchurch/1.jpg",
+        "christchurch/2.jpg",
+        "christchurch/3.jpg"
+      ],
+      "cityPlacesTopics": "christchurch/christchurch.json",
+      "cityHistory": "christchurch/cityhistory.json"
+    },
+    {
+      "id": 126,
+      "cityName": "Dunedin",
+      "photo": [
+        "dunedin/1.jpg",
+        "dunedin/2.jpg",
+        "dunedin/3.jpg"
+      ],
+      "cityPlacesTopics": "dunedin/dunedin.json",
+      "cityHistory": "dunedin/cityhistory.json"
+    },
+    {
+      "id": 137,
+      "cityName": "Invercargill",
+      "photo": [
+        "invercargill/1.jpg",
+        "invercargill/2.jpg",
+        "invercargill/3.jpg"
+      ],
+      "cityPlacesTopics": "invercargill/invercargill.json",
+      "cityHistory": "invercargill/cityhistory.json"
+    },
+    {
+      "id": 130,
+      "cityName": "Queenstown",
+      "photo": [
+        "queenstown/1.jpg",
+        "queenstown/2.jpg",
+        "queenstown/3.jpg"
+      ],
+      "cityPlacesTopics": "queenstown/queenstown.json",
+      "cityHistory": "queenstown/cityhistory.json"
+    },
+    {
+      "id": 2,
+      "cityName": "Auckland",
+      "photo": [
+        "auckland/1.jpg",
+        "auckland/2.jpg",
+        "auckland/3.jpg"
+      ],
+      "cityPlacesTopics": "auckland/auckland.json",
+      "cityHistory": "auckland/cityhistory.json"
+    },
+    {
+      "id": 57,
+      "cityName": "Rotorua",
+      "photo": [
+        "rotorua/1.jpg",
+        "rotorua/2.jpg",
+        "rotorua/3.jpg"
+      ],
+      "cityPlacesTopics": "rotorua/rotorua.json",
+      "cityHistory": "rotorua/cityhistory.json"
+    },
+    {
+      "id": 7051,
+      "cityName": "Whangarei",
+      "photo": [
+        "whangarei/1.jpg",
+        "whangarei/2.jpg",
+        "whangarei/3.jpg"
+      ],
+      "cityPlacesTopics": "whangarei/whangarei.json",
+      "cityHistory": "whangarei/cityhistory.json"
+    },
+    {
+      "id": 6,
+      "cityName": "Gisborne",
+      "photo": [
+        "gisborne/1.jpg",
+        "gisborne/2.jpg",
+        "gisborne/3.jpg"
+      ],
+      "cityPlacesTopics": "gisborne/gisborne.json",
+      "cityHistory": "gisborne/cityhistory.json"
+    },
+    {
+      "id": 83,
+      "cityName": "Palmerston North",
+      "photo": [
+        "palmerstonnorth/1.jpg",
+        "palmerstonnorth/2.jpg",
+        "palmerstonnorth/3.jpg"
+      ],
+      "cityPlacesTopics": "palmerstonnorth/palmerstonnorth.json",
+      "cityHistory": "palmerstonnorth/cityhistory.json"
+    },
+    {
+      "id": 67,
+      "cityName": "Napier",
+      "photo": [
+        "napier/1.jpg",
+        "napier/2.jpg",
+        "napier/3.jpg"
+      ],
+      "cityPlacesTopics": "napier/napier.json",
+      "cityHistory": "napier/cityhistory.json"
+    },
+    {
+      "id": 58,
+      "cityName": "Taupo",
+      "photo": [
+        "taupo/1.jpg",
+        "taupo/2.jpg",
+        "taupo/3.jpg"
+      ],
+      "cityPlacesTopics": "taupo/taupo.json",
+      "cityHistory": "taupo/cityhistory.json"
+    },
+    {
+      "id": 59,
+      "cityName": "Tauranga",
+      "photo": [
+        "tauranga/1.jpg",
+        "tauranga/2.jpg",
+        "tauranga/3.jpg"
+      ],
+      "cityPlacesTopics": "tauranga/tauranga.json",
+      "cityHistory": "tauranga/cityhistory.json"
+    },
+    {
+      "id": 72,
+      "cityName": "New Plymouth",
+      "photo": [
+        "newplymouth/1.jpg",
+        "newplymouth/2.jpg",
+        "newplymouth/3.jpg"
+      ],
+      "cityPlacesTopics": "newplymouth/newplymouth.json",
+      "cityHistory": "newplymouth/cityhistory.json"
+    }
+  ]
+}

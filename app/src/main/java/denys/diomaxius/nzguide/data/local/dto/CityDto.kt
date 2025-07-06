@@ -10,3 +10,8 @@ data class CityDto(
     val cityPlacesTopics: String,
     val cityHistory: String
 )
+
+@Serializable
+data class CitiesDto(
+    val cities: List<CityDto>
+)
