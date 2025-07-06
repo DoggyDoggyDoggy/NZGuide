@@ -1,5 +1,10 @@
 package denys.diomaxius.nzguide.navigation
 
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
@@ -32,7 +37,21 @@ fun AppNavigation(
                 HomeScreen()
             }
 
-            composable(NavScreen.City.route) {
+            composable(
+                route = NavScreen.City.route,
+                enterTransition = {
+                    slideInHorizontally(initialOffsetX = { 1000 }, animationSpec = tween(500)) + fadeIn()
+                },
+                exitTransition = {
+                    slideOutHorizontally(targetOffsetX = { -1000 }, animationSpec = tween(500)) + fadeOut()
+                },
+                popEnterTransition = {
+                    slideInHorizontally(initialOffsetX = { -1000 }, animationSpec = tween(500)) + fadeIn()
+                },
+                popExitTransition = {
+                    slideOutHorizontally(targetOffsetX = { 1000 }, animationSpec = tween(500)) + fadeOut()
+                }
+            ) {
                 CityScreen()
             }
 
