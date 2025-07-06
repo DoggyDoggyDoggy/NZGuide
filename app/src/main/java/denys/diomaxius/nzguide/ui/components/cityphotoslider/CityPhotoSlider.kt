@@ -24,14 +24,14 @@ fun CityPhotoSlider(
         contentAlignment = Alignment.BottomStart
     ) {
         AutoScrollPager(
-            items = city.photo,
+            items = city.photos,
             modifier = Modifier
                 .fillMaxWidth()
         ) { assetPath ->
             AssetImage(assetPath)
         }
 
-        TextOverlay(city.cityName)
+        TextOverlay(city.name)
     }
 }
 

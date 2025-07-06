@@ -76,7 +76,7 @@ fun CityCard(
 ) {
     val context = LocalContext.current
     val imageBitmap = remember {
-        context.assets.open(city.photo.first()).use {
+        context.assets.open(city.photos.first()).use {
             BitmapFactory.decodeStream(it).asImageBitmap()
         }
     }
@@ -99,11 +99,11 @@ fun CityCard(
             Image(
                 modifier = Modifier.fillMaxWidth(),
                 bitmap = imageBitmap,
-                contentDescription = city.cityName,
+                contentDescription = city.name,
                 contentScale = ContentScale.FillWidth
             )
 
-            TextOverlay(text = city.cityName)
+            TextOverlay(text = city.name)
         }
     }
 }

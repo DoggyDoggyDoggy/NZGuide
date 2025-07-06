@@ -88,12 +88,12 @@ fun Content(
         ) {
             InfoCard(
                 modifier = Modifier.weight(1f),
-                cardText = "Top Things to Do in ${city.cityName} City",
+                cardText = "Top Things to Do in ${city.name} City",
                 onClick = {
                     navHostController.navigate(
                         NavScreen.CityPlaces.createRoute(
-                            cityPlacesJsonPath = city.cityPlacesTopics,
-                            cityName = city.cityName
+                            cityPlacesJsonPath = city.places,
+                            cityName = city.name
                         )
                     ) {
                         launchSingleTop = true
@@ -111,8 +111,8 @@ fun Content(
                 onClick = {
                     navHostController.navigate(
                         NavScreen.CityHistory.createRoute(
-                            cityHistoryJsonPath = city.cityHistory,
-                            cityName = city.cityName
+                            cityHistoryJsonPath = city.history,
+                            cityName = city.name
                         )
                     ) {
                         launchSingleTop = true

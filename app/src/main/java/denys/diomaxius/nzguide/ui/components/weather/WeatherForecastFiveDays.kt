@@ -37,15 +37,16 @@ fun WeatherForecastFiveDays(
 
     LaunchedEffect(city) {
         viewModel.getForecast(
-            city = city.cityName+",NZ"
+            city = city.name + ",NZ"
         )
     }
 
-    when(forecastState) {
+    when (forecastState) {
         is Resource.Error -> {}
         is Resource.Loading -> {
             LoadingWeather()
         }
+
         is Resource.Success -> {
             LoadedWeather(forecastState = (forecastState as Resource.Success).data)
         }
@@ -59,12 +60,14 @@ fun LoadingWeather() {
         modifier = Modifier.fillMaxWidth()
     ) {
         repeat(5) {
-            Card (
+            Card(
                 modifier = Modifier
                     .weight(1f)
                     .padding(6.dp)
             ) {
-                Box(Modifier.fillMaxWidth().height(70.dp)) {
+                Box(Modifier
+                    .fillMaxWidth()
+                    .height(70.dp)) {
                     CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                 }
             }
@@ -78,7 +81,7 @@ fun LoadedWeather(forecastState: List<DailyForecast>) {
         modifier = Modifier.fillMaxWidth()
     ) {
         forecastState.forEach {
-            Card (
+            Card(
                 modifier = Modifier
                     .weight(1f)
                     .padding(6.dp)
@@ -105,7 +108,7 @@ fun LoadedWeather(forecastState: List<DailyForecast>) {
     }
 }
 
-fun dateFormatter(date: String) : String {
+fun dateFormatter(date: String): String {
     val formatterIn = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
     val formatterOut = DateTimeFormatter.ofPattern("dd MMM", Locale.ENGLISH)
     val dateTime = LocalDateTime.parse(date, formatterIn)

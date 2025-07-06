@@ -2,10 +2,10 @@ package denys.diomaxius.nzguide.domain.model.app
 
 data class City(
     val id: Int,
-    val cityName: String,
-    val photo: List<String>,
-    val cityPlacesTopics: String,
-    val cityHistory: String
+    val name: String,
+    val photos: List<String>,
+    val places: String,
+    val history: String
 )
 
 data class CityPlaceTopic(
