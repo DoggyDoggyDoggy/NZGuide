@@ -7,13 +7,16 @@ import denys.diomaxius.nzguide.data.local.dto.CityPlacesDto
 import kotlinx.serialization.json.Json
 
 class CityAssetsSource(private val context: Context) {
+    private val jsonParser: Json = Json {
+        ignoreUnknownKeys = true
+    }
+
     fun loadCityPlacesJson(fileName: String): CityPlacesDto {
         val json = context.assets.open(fileName)
             .bufferedReader()
             .use { it.readText() }
 
-        return Json { ignoreUnknownKeys = true }
-            .decodeFromString(json)
+        return jsonParser.decodeFromString(json)
     }
 
     fun loadCityHistoryJson(fileName: String): CityHistoryDto {
@@ -21,8 +24,7 @@ class CityAssetsSource(private val context: Context) {
             .bufferedReader()
             .use { it.readText() }
 
-        return Json { ignoreUnknownKeys = true }
-            .decodeFromString(json)
+        return jsonParser.decodeFromString(json)
     }
 
     fun loadCitiesJson(fileName: String): CitiesDto {
@@ -30,7 +32,6 @@ class CityAssetsSource(private val context: Context) {
             .bufferedReader()
             .use { it.readText() }
 
-        return Json { ignoreUnknownKeys = true }
-            .decodeFromString(json)
+        return jsonParser.decodeFromString(json)
     }
 }
