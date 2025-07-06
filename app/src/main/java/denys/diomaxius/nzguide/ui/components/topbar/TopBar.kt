@@ -11,11 +11,13 @@ import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopBar() {
+fun TopBar(
+    text: String
+) {
     CenterAlignedTopAppBar(
         title = {
             Text(
-                text = "City Guide",
+                text = text,
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
                 fontSize = 28.sp

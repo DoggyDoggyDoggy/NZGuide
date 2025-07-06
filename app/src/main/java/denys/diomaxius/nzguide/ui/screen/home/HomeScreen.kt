@@ -37,7 +37,9 @@ fun HomeScreen(
 
     Scaffold (
       topBar = {
-          TopBar()
+          TopBar(
+              text = "City Guide"
+          )
       }
     ) { innerPadding ->
         Content(
