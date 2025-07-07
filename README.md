@@ -28,3 +28,7 @@ NZGuide is a simple yet powerful Android app that helps users explore cities in 
 - **OkHttp**: HTTP client with support for interceptors and network tracing.
 - **Coil**: Fast, lightweight image loading library optimized for Kotlin and Compose.
 - **Hilt**: Dependency injection framework to manage object creation and scope.
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
