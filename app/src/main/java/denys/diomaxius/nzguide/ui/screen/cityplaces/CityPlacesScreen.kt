@@ -16,7 +16,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import denys.diomaxius.nzguide.domain.model.app.CityPlaceTopic
+import denys.diomaxius.nzguide.domain.model.city.CityPlaceTopic
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.asImageBitmap

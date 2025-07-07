@@ -33,7 +33,7 @@ import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import coil3.compose.AsyncImage
-import denys.diomaxius.nzguide.domain.model.app.City
+import denys.diomaxius.nzguide.domain.model.city.City
 import denys.diomaxius.nzguide.domain.model.events.Event
 import denys.diomaxius.nzguide.navigation.NavScreen
 

@@ -3,7 +3,7 @@ package denys.diomaxius.nzguide.ui.screen.cityplaces
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import denys.diomaxius.nzguide.domain.model.app.CityPlaceTopic
+import denys.diomaxius.nzguide.domain.model.city.CityPlaceTopic
 import denys.diomaxius.nzguide.domain.usecase.GetCityByIdUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

@@ -2,7 +2,7 @@ package denys.diomaxius.nzguide.ui.screen.home
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import denys.diomaxius.nzguide.domain.model.app.City
+import denys.diomaxius.nzguide.domain.model.city.City
 import denys.diomaxius.nzguide.domain.usecase.GetAllCitiesUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

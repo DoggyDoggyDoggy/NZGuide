@@ -1,6 +1,6 @@
 package denys.diomaxius.nzguide.domain.usecase
 
-import denys.diomaxius.nzguide.domain.model.app.City
+import denys.diomaxius.nzguide.domain.model.city.City
 import denys.diomaxius.nzguide.domain.repository.CityRepository
 import javax.inject.Inject
 

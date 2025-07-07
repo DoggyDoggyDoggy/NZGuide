@@ -3,7 +3,7 @@ package denys.diomaxius.nzguide.data.repository
 import denys.diomaxius.nzguide.data.local.datasource.CityAssetsSource
 import denys.diomaxius.nzguide.data.local.dto.CityDto
 import denys.diomaxius.nzguide.data.local.mapper.toDomain
-import denys.diomaxius.nzguide.domain.model.app.City
+import denys.diomaxius.nzguide.domain.model.city.City
 import denys.diomaxius.nzguide.domain.repository.CityRepository
 import javax.inject.Inject
 

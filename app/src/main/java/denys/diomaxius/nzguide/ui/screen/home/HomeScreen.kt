@@ -22,7 +22,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import denys.diomaxius.nzguide.domain.model.app.City
+import denys.diomaxius.nzguide.domain.model.city.City
 import denys.diomaxius.nzguide.navigation.LocalNavController
 import denys.diomaxius.nzguide.navigation.NavScreen
 import denys.diomaxius.nzguide.ui.components.TextOverlay

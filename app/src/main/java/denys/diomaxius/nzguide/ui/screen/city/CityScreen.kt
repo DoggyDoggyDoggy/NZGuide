@@ -22,7 +22,7 @@ import denys.diomaxius.nzguide.ui.components.events.EventsRow
 import denys.diomaxius.nzguide.ui.components.weather.WeatherForecastFiveDays
 import androidx.compose.runtime.getValue
 import androidx.navigation.NavHostController
-import denys.diomaxius.nzguide.domain.model.app.City
+import denys.diomaxius.nzguide.domain.model.city.City
 import denys.diomaxius.nzguide.navigation.LocalNavController
 import denys.diomaxius.nzguide.navigation.NavScreen
 

@@ -14,7 +14,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import denys.diomaxius.nzguide.domain.model.app.CityHistory
+import denys.diomaxius.nzguide.domain.model.city.CityHistory
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
