@@ -2,7 +2,7 @@
 
 NZGuide is a simple yet powerful Android app that helps users explore cities in New Zealand. It’s built using Jetpack Compose and follows Clean Architecture and MVVM to ensure a clean and scalable codebase.
 
-## Demo
+## 📸 Demo
 ![NZGuideVideo2-ezgif com-speed (2)](https://github.com/user-attachments/assets/3e64b2c0-2d6c-4a50-9dcc-6fba62a209d3)
 
 ## ✨ Key Features
