@@ -49,7 +49,6 @@ fun CityPlacesScreen(
             cityPlacesTopics = cityPlacesTopics
         )
     }
-
 }
 
 @Composable
