@@ -13,6 +13,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -29,6 +30,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
+import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
 fun CityPlacesScreen(
@@ -37,33 +39,29 @@ fun CityPlacesScreen(
     val cityPlacesTopics by viewModel.cityPlaces.collectAsState()
     val cityName by viewModel.cityName.collectAsState()
 
-    Content(
-        cityPlacesTopics = cityPlacesTopics,
-        cityName = cityName
-    )
+    Scaffold(
+        topBar = {
+            TopBar("Top Things to Do in $cityName")
+        }
+    ) { innerPadding ->
+        Content(
+            modifier = Modifier.padding(innerPadding),
+            cityPlacesTopics = cityPlacesTopics
+        )
+    }
+
 }
 
 @Composable
 fun Content(
     modifier: Modifier = Modifier,
-    cityPlacesTopics: List<CityPlaceTopic>,
-    cityName: String
+    cityPlacesTopics: List<CityPlaceTopic>
 ) {
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
             .padding(12.dp)
     ) {
-        item {
-            Text(
-                modifier = Modifier.fillMaxWidth(),
-                text = "Top Things to Do in $cityName",
-                fontWeight = FontWeight.Bold,
-                fontSize = 32.sp,
-                textAlign = TextAlign.Center
-            )
-        }
-
         items(cityPlacesTopics) { topic ->
             CityPlace(topic)
         }
