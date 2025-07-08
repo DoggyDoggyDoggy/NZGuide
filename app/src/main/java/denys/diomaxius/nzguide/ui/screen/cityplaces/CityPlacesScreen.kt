@@ -59,7 +59,7 @@ fun Content(
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
-            .padding(12.dp)
+            .padding(horizontal = 12.dp)
     ) {
         items(cityPlacesTopics) { topic ->
             CityPlace(topic)
