@@ -7,7 +7,6 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,15 +15,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -44,6 +43,7 @@ import coil3.compose.AsyncImage
 import denys.diomaxius.nzguide.domain.model.events.Event
 import androidx.core.net.toUri
 import denys.diomaxius.nzevents.ui.screen.event.EventDetailsScreenViewModel
+import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
 fun EventDetailsScreen(
@@ -55,42 +55,54 @@ fun EventDetailsScreen(
     if(event.id == "API Error") {
         ErrorLoadEvent()
     } else if (event.id != "") {
-        Content(
-            event = event,
-            context = context
-        )
-    }
-}
-
-@Composable
-fun ErrorLoadEvent() {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = "Cannot load current event",
-            fontSize = 24.sp
-        )
+        Scaffold(
+            topBar = {
+                TopBar(
+                    text = "Event Details"
+                )
+            },
+            bottomBar = {
+                Button(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 16.dp)
+                        .height(50.dp),
+                    onClick = {
+                        context.startActivity(
+                            Intent(Intent.ACTION_VIEW, event.url.toUri())
+                        )
+                    }
+                ) {
+                    Text(
+                        text = "Buy Tickets",
+                        fontSize = 20.sp
+                    )
+                }
+            }
+        ) { innerPadding ->
+            Content(
+                modifier = Modifier.padding(innerPadding),
+                event = event
+            )
+        }
     }
 }
 
 @Composable
 fun Content(
-    event: Event,
-    context: Context
+    modifier: Modifier = Modifier,
+    event: Event
 ) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
-            .padding(top = 32.dp)
+            .padding(top = 16.dp)
             .padding(horizontal = 12.dp)
-            .verticalScroll(rememberScrollState())
     ) {
         Text(
             text = event.name,
             fontWeight = FontWeight.Bold,
-            fontSize = 32.sp
+            fontSize = 24.sp
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -112,63 +124,6 @@ fun Content(
         EventAddress(event)
 
         EventDates(event)
-
-        Spacer(modifier = Modifier.weight(1f))
-
-        Button(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 32.dp)
-                .height(50.dp),
-            onClick = {
-                context.startActivity(
-                    Intent(Intent.ACTION_VIEW, event.url.toUri())
-                )
-            }
-        ) {
-            Text(
-                text = "Buy Tickets",
-                fontSize = 20.sp
-            )
-        }
-    }
-}
-
-@Composable
-fun EventDescription(
-    event: Event
-) {
-    Text(
-        text = "Description:",
-        fontSize = 24.sp,
-        fontWeight = FontWeight.SemiBold
-    )
-
-    Spacer(modifier = Modifier.height(8.dp))
-
-    Text(
-        text = event.description,
-        fontSize = 16.sp
-    )
-}
-
-@Composable
-fun EventAddress(
-    event: Event
-) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Icon(
-            imageVector = Icons.Default.LocationOn,
-            contentDescription = "Address"
-        )
-
-        Text(
-            text = event.address,
-            fontSize = 16.sp
-        )
     }
 }
 
@@ -220,8 +175,8 @@ fun EventDates(
             animationSpec = tween(durationMillis = 350)
         )
     ) {
-        Column {
-            event.sessions.sessions.drop(1).forEach {
+        LazyColumn {
+            items(event.sessions.sessions.drop(1)) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically
