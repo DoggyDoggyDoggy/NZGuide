@@ -63,7 +63,7 @@ fun Content(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(top = 16.dp)
+            .padding(top = 12.dp)
             .padding(horizontal = 12.dp)
     ) {
         Text(
@@ -72,7 +72,7 @@ fun Content(
             fontSize = 24.sp
         )
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(6.dp))
 
         AsyncImage(
             modifier = Modifier
@@ -82,11 +82,11 @@ fun Content(
             contentDescription = "Image"
         )
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(6.dp))
 
         EventDescription(event)
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(12.dp))
 
         EventAddress(event)
         Spacer(modifier = Modifier.height(4.dp))

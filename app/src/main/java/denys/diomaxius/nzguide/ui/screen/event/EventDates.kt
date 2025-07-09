@@ -53,7 +53,7 @@ fun EventDates(event: Event) {
                     Text(
                         text = session.datetimeSummary,
                         fontSize = 16.sp,
-                        modifier = Modifier.padding(vertical = 2.dp)
+                        modifier = Modifier.padding(vertical = 1.dp)
                     )
                 }
             }
