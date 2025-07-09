@@ -23,7 +23,8 @@ fun BuyTicketButton(
     Button(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = 8.dp, horizontal = 32.dp)
+            .padding(horizontal = 32.dp)
+            .padding(bottom = 8.dp)
             .height(50.dp),
         onClick = {
             context.startActivity(

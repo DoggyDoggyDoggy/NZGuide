@@ -86,10 +86,10 @@ fun Content(
 
         EventDescription(event)
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
         EventAddress(event)
-
+        Spacer(modifier = Modifier.height(4.dp))
         EventDates(event)
     }
 }
