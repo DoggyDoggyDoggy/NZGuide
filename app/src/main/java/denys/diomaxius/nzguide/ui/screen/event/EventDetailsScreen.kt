@@ -1,11 +1,7 @@
 package denys.diomaxius.nzguide.ui.screen.event
 
 import android.content.Context
-import android.content.Intent
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.expandVertically
-import androidx.compose.animation.shrinkVertically
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,7 +17,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -29,7 +24,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -41,7 +36,6 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import denys.diomaxius.nzguide.domain.model.events.Event
-import androidx.core.net.toUri
 import denys.diomaxius.nzevents.ui.screen.event.EventDetailsScreenViewModel
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
@@ -52,7 +46,7 @@ fun EventDetailsScreen(
     val event by viewModel.event.collectAsState()
     val context: Context = LocalContext.current
 
-    if(event.id == "API Error") {
+    if (event.id == "API Error") {
         ErrorLoadEvent()
     } else if (event.id != "") {
         Scaffold(
@@ -62,22 +56,10 @@ fun EventDetailsScreen(
                 )
             },
             bottomBar = {
-                Button(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 16.dp)
-                        .height(50.dp),
-                    onClick = {
-                        context.startActivity(
-                            Intent(Intent.ACTION_VIEW, event.url.toUri())
-                        )
-                    }
-                ) {
-                    Text(
-                        text = "Buy Tickets",
-                        fontSize = 20.sp
-                    )
-                }
+                BuyTicketButton(
+                    event = event,
+                    context = context
+                )
             }
         ) { innerPadding ->
             Content(
@@ -115,7 +97,7 @@ fun Content(
             contentDescription = "Image"
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(8.dp))
 
         EventDescription(event)
 
@@ -128,70 +110,52 @@ fun Content(
 }
 
 @Composable
-fun EventDates(
-    event: Event
-) {
-    var expanded by remember { mutableStateOf(false) }
+fun EventDates(event: Event) {
+    val sessions = event.sessions.sessions
+    var expanded by rememberSaveable { mutableStateOf(false) }
 
-    event.sessions
-        .sessions
-        .getOrNull(0)
-        ?.datetimeSummary
-        ?.let {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Icon(
-                    imageVector = Icons.Default.DateRange,
-                    contentDescription = "Date"
-                )
-                Text(
-                    text = it,
-                    fontSize = 16.sp
-                )
-                Spacer(modifier = Modifier.width(12.dp))
-
-                if (event.sessions.sessions.size > 1){
-                    Icon(
-                        modifier = Modifier.clickable {
-                            expanded = !expanded
-                        },
-                        imageVector =
-                            if (!expanded) Icons.Default.KeyboardArrowDown
-                            else Icons.Default.KeyboardArrowUp,
-                        contentDescription = "Date"
-                    )
-                }
-            }
-        }
-
-    AnimatedVisibility(
-        visible = expanded,
-        enter = expandVertically(
-            animationSpec = tween(durationMillis = 350)
-        ),
-        exit = shrinkVertically(
-            animationSpec = tween(durationMillis = 350)
-        )
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .animateContentSize(),
+        verticalAlignment = Alignment.Top
     ) {
-        LazyColumn {
-            items(event.sessions.sessions.drop(1)) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.DateRange,
-                        contentDescription = "Date"
-                    )
+        Icon(
+            imageVector = Icons.Default.DateRange,
+            contentDescription = null
+        )
 
+        if (!expanded) {
+            Text(
+                text = sessions.firstOrNull()?.datetimeSummary.orEmpty(),
+                fontSize = 16.sp,
+            )
+        } else {
+            LazyColumn {
+                items(sessions) { session ->
                     Text(
-                        text = it.datetimeSummary,
-                        fontSize = 16.sp
+                        text = session.datetimeSummary,
+                        fontSize = 16.sp,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 2.dp)
                     )
                 }
             }
         }
+
+        if (sessions.size > 1) {
+            Icon(
+                modifier = Modifier
+                    .clickable { expanded = !expanded },
+                imageVector = if (expanded)
+                    Icons.Default.KeyboardArrowUp
+                else
+                    Icons.Default.KeyboardArrowDown,
+                contentDescription = if (expanded) "Hide dates" else "Show dates"
+            )
+        }
+
+        Spacer(modifier = Modifier.width(20.dp))
     }
 }
