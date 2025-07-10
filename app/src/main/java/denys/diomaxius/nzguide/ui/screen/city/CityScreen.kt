@@ -121,6 +121,10 @@ fun Content(
                     }
                 }
             )
+
+            Spacer(
+                modifier = Modifier.height(165.dp)
+            )
         }
     }
 }
