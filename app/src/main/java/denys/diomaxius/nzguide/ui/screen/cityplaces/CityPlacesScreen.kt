@@ -30,6 +30,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
+import denys.diomaxius.nzguide.navigation.LocalNavController
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
@@ -38,10 +39,14 @@ fun CityPlacesScreen(
 ) {
     val cityPlacesTopics by viewModel.cityPlaces.collectAsState()
     val cityName by viewModel.cityName.collectAsState()
+    val navHostController = LocalNavController.current
 
     Scaffold(
         topBar = {
-            TopBar("Top Things to Do in $cityName")
+            TopBar(
+                "Top Things to Do in $cityName",
+                navHostController = navHostController
+            )
         }
     ) { innerPadding ->
         Content(

@@ -26,6 +26,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import denys.diomaxius.nzguide.domain.model.events.Event
 import denys.diomaxius.nzevents.ui.screen.event.EventDetailsScreenViewModel
+import denys.diomaxius.nzguide.navigation.LocalNavController
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
@@ -34,6 +35,7 @@ fun EventDetailsScreen(
 ) {
     val event by viewModel.event.collectAsState()
     val context: Context = LocalContext.current
+    val navHostController = LocalNavController.current
 
     if (event.id == "API Error") {
         ErrorLoadEvent()
@@ -41,7 +43,8 @@ fun EventDetailsScreen(
         Scaffold(
             topBar = {
                 TopBar(
-                    text = "Event Details"
+                    text = "Event Details",
+                    navHostController = navHostController
                 )
             },
             bottomBar = {

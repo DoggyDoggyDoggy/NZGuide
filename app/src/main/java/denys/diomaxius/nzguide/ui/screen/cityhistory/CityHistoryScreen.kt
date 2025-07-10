@@ -15,6 +15,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import denys.diomaxius.nzguide.domain.model.city.CityHistory
+import denys.diomaxius.nzguide.navigation.LocalNavController
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
@@ -24,11 +25,13 @@ fun CityHistoryScreen(
 ) {
     val cityHistory by viewModel.cityHistory.collectAsState()
     val cityName by viewModel.cityName.collectAsState()
+    val navHostController = LocalNavController.current
 
     Scaffold(
         topBar = {
             TopBar(
-                text = "History of $cityName"
+                text = "History of $cityName",
+                navHostController = navHostController
             )
         }
     ) { innerPadding ->

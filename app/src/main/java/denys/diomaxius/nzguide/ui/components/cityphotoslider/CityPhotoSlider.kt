@@ -12,7 +12,6 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import denys.diomaxius.nzguide.domain.model.city.City
-import denys.diomaxius.nzguide.ui.components.TextOverlay
 
 @Composable
 fun CityPhotoSlider(
@@ -30,8 +29,6 @@ fun CityPhotoSlider(
         ) { assetPath ->
             AssetImage(assetPath)
         }
-
-        TextOverlay(city.name)
     }
 }
 
