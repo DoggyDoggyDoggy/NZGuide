@@ -84,7 +84,6 @@ fun Content(
                 navHostController = navHostController
             )
         }
-
     }
 }
 
