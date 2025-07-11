@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
@@ -31,6 +32,7 @@ import denys.diomaxius.nzguide.ui.components.TextOverlay
 import denys.diomaxius.nzguide.ui.components.navigationdrawer.NavigationDrawer
 import denys.diomaxius.nzguide.ui.components.topbar.MenuButton
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
+import kotlinx.coroutines.launch
 
 @Composable
 fun HomeScreen(
@@ -39,6 +41,7 @@ fun HomeScreen(
     val cities by viewModel.cities.collectAsState()
     val navHostController = LocalNavController.current
     val drawerState = rememberDrawerState(DrawerValue.Closed)
+    val scope = rememberCoroutineScope()
 
     NavigationDrawer(
         drawerState = drawerState
@@ -48,7 +51,11 @@ fun HomeScreen(
                 TopBar(
                     text = "City Guide",
                     navigationButton = {
-                        MenuButton {}
+                        MenuButton {
+                            scope.launch {
+                                drawerState.open()
+                            }
+                        }
                     }
                 )
             }
