@@ -25,6 +25,7 @@ import androidx.navigation.NavHostController
 import denys.diomaxius.nzguide.domain.model.city.City
 import denys.diomaxius.nzguide.navigation.LocalNavController
 import denys.diomaxius.nzguide.navigation.NavScreen
+import denys.diomaxius.nzguide.ui.components.topbar.PopBackArrowButton
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
@@ -39,7 +40,11 @@ fun CityScreen(
         topBar = {
             TopBar(
                 text = city.name,
-                navHostController = navHostController
+                navigationButton = {
+                    PopBackArrowButton {
+                        navHostController.popBackStack()
+                    }
+                }
             )
         }
     ) { innerPadding ->

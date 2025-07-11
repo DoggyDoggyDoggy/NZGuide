@@ -31,6 +31,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import denys.diomaxius.nzguide.navigation.LocalNavController
+import denys.diomaxius.nzguide.ui.components.topbar.PopBackArrowButton
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
@@ -44,8 +45,12 @@ fun CityPlacesScreen(
     Scaffold(
         topBar = {
             TopBar(
-                "Top Things to Do in $cityName",
-                navHostController = navHostController
+                text = "Top Things to Do in $cityName",
+                navigationButton = {
+                    PopBackArrowButton {
+                        navHostController.popBackStack()
+                    }
+                }
             )
         }
     ) { innerPadding ->

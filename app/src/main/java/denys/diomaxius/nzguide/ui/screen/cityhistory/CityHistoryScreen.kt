@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import denys.diomaxius.nzguide.domain.model.city.CityHistory
 import denys.diomaxius.nzguide.navigation.LocalNavController
+import denys.diomaxius.nzguide.ui.components.topbar.PopBackArrowButton
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
@@ -31,7 +32,11 @@ fun CityHistoryScreen(
         topBar = {
             TopBar(
                 text = "History of $cityName",
-                navHostController = navHostController
+                navigationButton = {
+                    PopBackArrowButton {
+                        navHostController.popBackStack()
+                    }
+                }
             )
         }
     ) { innerPadding ->

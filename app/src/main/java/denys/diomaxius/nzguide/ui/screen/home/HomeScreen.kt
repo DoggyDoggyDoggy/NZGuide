@@ -9,7 +9,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
+import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
@@ -26,6 +28,8 @@ import denys.diomaxius.nzguide.domain.model.city.City
 import denys.diomaxius.nzguide.navigation.LocalNavController
 import denys.diomaxius.nzguide.navigation.NavScreen
 import denys.diomaxius.nzguide.ui.components.TextOverlay
+import denys.diomaxius.nzguide.ui.components.navigationdrawer.NavigationDrawer
+import denys.diomaxius.nzguide.ui.components.topbar.MenuButton
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
@@ -34,19 +38,27 @@ fun HomeScreen(
 ) {
     val cities by viewModel.cities.collectAsState()
     val navHostController = LocalNavController.current
+    val drawerState = rememberDrawerState(DrawerValue.Closed)
 
-    Scaffold (
-      topBar = {
-          TopBar(
-              text = "City Guide"
-          )
-      }
-    ) { innerPadding ->
-        Content(
-            modifier = Modifier.padding(innerPadding),
-            navHostController = navHostController,
-            cities = cities
-        )
+    NavigationDrawer(
+        drawerState = drawerState
+    ) {
+        Scaffold(
+            topBar = {
+                TopBar(
+                    text = "City Guide",
+                    navigationButton = {
+                        MenuButton {}
+                    }
+                )
+            }
+        ) { innerPadding ->
+            Content(
+                modifier = Modifier.padding(innerPadding),
+                navHostController = navHostController,
+                cities = cities
+            )
+        }
     }
 }
 
@@ -59,7 +71,7 @@ fun Content(
     LazyColumn(
         modifier = modifier
     ) {
-        items(cities){
+        items(cities) {
             CityCard(
                 city = it,
                 navHostController = navHostController

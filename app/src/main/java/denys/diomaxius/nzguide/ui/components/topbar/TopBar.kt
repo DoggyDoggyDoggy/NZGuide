@@ -20,13 +20,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopBar(
     text: String,
-    navHostController: NavHostController? = null
+    navigationButton: @Composable () -> Unit,
 ) {
     CenterAlignedTopAppBar(
         title = {
@@ -40,11 +39,7 @@ fun TopBar(
             )
         },
         navigationIcon = {
-            if (navHostController != null) {
-                PopBackArrow(navHostController)
-            } else {
-                MenuButton()
-            }
+            navigationButton()
         },
         actions = {
             // dummy to center text
@@ -61,13 +56,11 @@ fun TopBar(
 }
 
 @Composable
-fun PopBackArrow(
-    navHostController: NavHostController
+fun PopBackArrowButton(
+    onClick: () -> Unit
 ) {
     IconButton(
-        onClick = {
-            navHostController.popBackStack()
-        }
+        onClick = onClick
     ) {
         Icon(
             modifier = Modifier.size(32.dp),
@@ -79,9 +72,11 @@ fun PopBackArrow(
 }
 
 @Composable
-fun MenuButton() {
+fun MenuButton(
+    onClick: () -> Unit
+) {
     IconButton(
-        onClick = {}
+        onClick = onClick
     ) {
         Icon(
             modifier = Modifier.size(32.dp),

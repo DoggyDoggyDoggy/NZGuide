@@ -27,6 +27,7 @@ import coil3.compose.AsyncImage
 import denys.diomaxius.nzguide.domain.model.events.Event
 import denys.diomaxius.nzevents.ui.screen.event.EventDetailsScreenViewModel
 import denys.diomaxius.nzguide.navigation.LocalNavController
+import denys.diomaxius.nzguide.ui.components.topbar.PopBackArrowButton
 import denys.diomaxius.nzguide.ui.components.topbar.TopBar
 
 @Composable
@@ -44,7 +45,11 @@ fun EventDetailsScreen(
             topBar = {
                 TopBar(
                     text = "Event Details",
-                    navHostController = navHostController
+                    navigationButton = {
+                        PopBackArrowButton {
+                            navHostController.popBackStack()
+                        }
+                    }
                 )
             },
             bottomBar = {
