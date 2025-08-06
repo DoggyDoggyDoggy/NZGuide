@@ -4,10 +4,10 @@ NZGuide is a simple yet powerful Android app that helps users explore cities in 
 
 **🛠️ Note:** NZGuide is currently being developed in a private repository. I plan to make it public soon as the app takes shape.
 
-## 📸 Demo
+## Demo
 ![NZGuideVideo2-ezgif com-speed (2)](https://github.com/user-attachments/assets/3e64b2c0-2d6c-4a50-9dcc-6fba62a209d3)
 
-## ✨ Key Features
+## Key Features
 
 - **City List**: Display a scrollable list of cities with a large background image and name.
 - **City Detail Screen**:
@@ -18,7 +18,7 @@ NZGuide is a simple yet powerful Android app that helps users explore cities in 
 - **Event Detail Screen**: Detailed view with description, schedule, location, and a “Buy Tickets” button linking to the event provider’s website.
 - **Offline Mode**: When offline, weather and events sections are hidden, leaving only the offline attractions list. (in development)
 
-## 🛠 Technologies
+## Technologies
 
 - **Jetpack Compose**: A modern, declarative UI toolkit for Android.
 - **Kotlinx Serialization**: For efficient parsing and serialization of JSON data.
